@@ -1,0 +1,13 @@
+.light {
+  background-color: var(--primary-light-bg);
+}
+.light h1 {
+  color: #000;
+}
+
+.dark {
+  background-color: var(--primary-dark-bg);
+}
+.dark h1 {
+  color: white;
+}/*# sourceMappingURL=Home.module.css.map */
