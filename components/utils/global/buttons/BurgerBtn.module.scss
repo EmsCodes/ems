@@ -1,0 +1,59 @@
+.burgerBtn {
+  order: 3;
+  position: relative;
+  //   background-color: var(--color-text-secondary);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.one,
+.three {
+  width: 40px;
+  height: 2px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.circle {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-text-secondary);
+  border-radius: 50%;
+}
+// .cross {
+//   background-color: var(--color-text-secondary);
+//   border-radius: 50%;
+//   padding: 10px 15px;
+//   font-size: 1.5em;
+//   text-align: center;
+// }
+.circleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.two {
+  width: 27px;
+  height: 2px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+// darkBurger
+.darkOne,
+.darkThree {
+  width: 40px;
+  height: 2px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: white;
+}
+.darkTwo {
+  width: 27px;
+  height: 2px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background: white;
+}

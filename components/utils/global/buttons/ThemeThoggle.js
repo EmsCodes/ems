@@ -30,10 +30,7 @@ when the darkmode/ligtmode button is clicked */
   return (
     <div className="flex justify-center">
       {currentTheme === "dark" ? (
-        <button
-          className="bg-black-700 hover:bg-accent w-20 rounded-md border-purple-400 border-2 p-4 flex justify-center"
-          onClick={() => setTheme("light")}
-        >
+        <button className="" onClick={() => setTheme("light")}>
           {" "}
           <Image
             src={sun}
@@ -43,10 +40,7 @@ when the darkmode/ligtmode button is clicked */
           />
         </button>
       ) : (
-        <button
-          className="bg-gray-100 w-20 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300 flex justify-center"
-          onClick={() => setTheme("dark")}
-        >
+        <button className="" onClick={() => setTheme("dark")}>
           <Image
             src={moon}
             alt="moon icon for dark mode"

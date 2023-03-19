@@ -9,22 +9,20 @@ $font-headings: "Playfair Display", serif;
 // $color-bg-accent-dark: #505050;
 // $color-bg-light: #f7f7f7;
 // $color-text-dark: #ede5d8;
-// $color-text-secondary: #f56457;
+$color-text-secondary: #f56457;
 // $color-text-light: #353535;
 
-// :root {
-//   // --primary-dark-bg: #{$primary-dark};
-//   // --primary-light-bg: #{$primary-light};
-//   --color-text-secondary: #{$color-text-secondary};
-//   // --max-width: 1100px;
-// }
-
-h1 {
-  font-family: $font-headings;
+:root {
+  // --primary-dark-bg: #{$primary-dark};
+  // --primary-light-bg: #{$primary-light};
+  --color-text-secondary: #{$color-text-secondary};
+  // --max-width: 1100px;
 }
-// //darkmode/lightmode
 
-// // fonts/heading
+// h1 {
+//   font-family: $font-headings;
+// }
+// //darkmode/lightmode
 
 // body {
 //   background: var(--color-bg-primary);

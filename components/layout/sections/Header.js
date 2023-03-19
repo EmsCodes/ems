@@ -5,58 +5,84 @@ import darkLogo from "../../../public/images/icons/logo-dark-mode.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import ThemeThoggle from "@/components/utils/global/buttons/ThemeThoggle";
+import styles from "../sections/Header.module.scss";
+import BurgerBtn from "@/components/utils/global/buttons/BurgerBtn";
 
 function Header({ children }) {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
+  const [menuState, setMenuState] = useState(styles.hideMenu);
+
   useEffect(() => {
-    //useEffect only rund on client side
+    //useEffect only run on client side
     setMounted(true);
   }, []);
 
   if (!mounted) {
     return null;
   }
+
+  function menuFunction() {
+    if (menuState === styles.hideMenu) {
+      setMenuState(styles.showMenu);
+    } else {
+      setMenuState(styles.hideMenu);
+    }
+  }
+
+  console.log(theme);
+
   /* a variable which will check the current system preference, 
 or will change the theme based on userpreference 
 when the darkmode/ligtmode button is clicked */
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  theme === "system" ? systemTheme : theme;
 
   return (
     <>
-      <header className="flex">
-        <div>
+      <header className={styles.header}>
+        <div className="logo">
           {theme === "dark" ? (
             <Link href="/">
               <Image
                 src={darkLogo}
-                alt="Porftolio logo. An E with a dot after it."
+                alt="Porftolio logo.En hvit E med en lakserosa dott/punktum."
               />
             </Link>
           ) : (
             <Link href="/">
               <Image
                 src={lightLogo}
-                alt="Porftolio logo. An E with a dot after it."
+                alt="Porftolio logo. En mørk E med en lakserosa dott/punktum."
               />
             </Link>
           )}
         </div>
-        <nav className="container flex justify-between items-center">
-          <ul className="flex ">
-            <li>
-              <Link href="#prosjekter">Prosjekter</Link>
-            </li>
-            <li>
-              <Link href="#om">Om meg</Link>
-            </li>
-            <li>
-              <Link href="#kontakt">Kontakt</Link>
-            </li>
-          </ul>
-        </nav>
-        <ThemeThoggle />
+        <div className="flex">
+          <BurgerBtn menuFunction={menuFunction} />
+          <ThemeThoggle />
+        </div>
+        <div className={menuState}>
+          <nav role="navigation">
+            <ul className="font-serif">
+              <li className="">
+                <Link href="#prosjekter">
+                  Prosjekter<span className="text-accent">.</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="#om">
+                  Om meg<span className="text-accent">.</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="#kontakt">
+                  Kontakt<span className="text-accent">.</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <div className="container">{children}</div>
@@ -66,3 +92,5 @@ when the darkmode/ligtmode button is clicked */
 }
 
 export default Header;
+
+// const [menuBtn, setMenuBtn] = useState(faBars);

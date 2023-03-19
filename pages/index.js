@@ -23,7 +23,7 @@ export default function Home() {
   /* a variable which will check the current system preference, 
 or will change the theme based on userpreference 
 when the darkmode/ligtmode button is clicked */
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  theme === "system" ? systemTheme : theme;
 
   return (
     <Layout>
@@ -35,17 +35,19 @@ when the darkmode/ligtmode button is clicked */
           rel="stylesheet"
         />
       </Head>
-      <div className="grid place-items-center h-screen">
+      <main className="main">
         <div>
-          <h1 className="text-7xl font-bold text-center">
-            {currentTheme === "dark" ? "Dark" : "Light"}{" "}
-            <span className="dark:text-accent">Mode</span>
-          </h1>
-          <p className="text-pink my-8 text-center">
-            Click the button below to switch mode
+          <Heading style="font-serif flex-row">
+            <div className="text-accent">Frontend-Developer</div>
+            <div className="text-6xl font-black">Endre Makra-Stenkløv</div>
+          </Heading>
+          <p>
+            Med fokus på design og brukervennlighet
+            <span className="text-accent">.</span>
           </p>
         </div>
-      </div>
+      </main>
+
       {/* <main className="mode">
         <section>
           <Heading content="Frontend-developer Endre Makra-Stenkløv" />

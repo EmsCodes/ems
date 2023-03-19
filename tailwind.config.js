@@ -25,7 +25,7 @@ module.exports = {
       "gray-light": "#d3dce6",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
+      sans: ["Lato", "sans-serif"],
       serif: ["Playfair Display", "serif"],
     },
     extend: {
