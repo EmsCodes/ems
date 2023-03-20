@@ -30,7 +30,11 @@ when the darkmode/ligtmode button is clicked */
   return (
     <div className="flex justify-center">
       {currentTheme === "dark" ? (
-        <button className="" onClick={() => setTheme("light")}>
+        <button
+          className=""
+          title="Light mode"
+          onClick={() => setTheme("light")}
+        >
           {" "}
           <Image
             src={sun}
@@ -40,7 +44,7 @@ when the darkmode/ligtmode button is clicked */
           />
         </button>
       ) : (
-        <button className="" onClick={() => setTheme("dark")}>
+        <button className="" title="Dark mode" onClick={() => setTheme("dark")}>
           <Image
             src={moon}
             alt="moon icon for dark mode"

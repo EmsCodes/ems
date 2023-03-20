@@ -1,2 +1,68 @@
+.mainSection {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 10vh;
+  height: 100vh;
+  text-align: center;
 
+  h1 {
+    span {
+      display: block;
+    }
 
+    :first-child {
+      font-size: 1.2em;
+    }
+    :nth-child(2) {
+      font-size: 1.5em;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.services {
+  font-family: var(--serif-font);
+  margin-top: 25px;
+  font-size: 1em;
+  //   animation: fadeIn 2s ease-in-out;
+}
+
+.services::after {
+  content: "";
+  animation: changingText 10s infinite;
+}
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes changingText {
+  0% {
+    content: "Webutvikling";
+  }
+  25% {
+    content: "UX/UI";
+  }
+  50% {
+    content: "Web design";
+  }
+  75% {
+    content: "Tilgjengelighet/WCAG";
+  }
+  100% {
+    content: "Webutvikling";
+  }
+}
+
+.ctaContainer {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+}

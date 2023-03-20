@@ -40,50 +40,52 @@ when the darkmode/ligtmode button is clicked */
 
   return (
     <>
-      <header className={styles.header}>
-        <div className="logo">
-          {theme === "dark" ? (
-            <Link href="/">
-              <Image
-                src={darkLogo}
-                alt="Porftolio logo.En hvit E med en lakserosa dott/punktum."
-              />
-            </Link>
-          ) : (
-            <Link href="/">
-              <Image
-                src={lightLogo}
-                alt="Porftolio logo. En mørk E med en lakserosa dott/punktum."
-              />
-            </Link>
-          )}
-        </div>
-        <div className="flex">
-          <BurgerBtn menuFunction={menuFunction} />
-          <ThemeThoggle />
-        </div>
-        <div className={menuState}>
-          <nav role="navigation">
-            <ul className="font-serif">
-              <li className="">
-                <Link href="#prosjekter">
-                  Prosjekter<span className="text-accent">.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#om">
-                  Om meg<span className="text-accent">.</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#kontakt">
-                  Kontakt<span className="text-accent">.</span>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <div className="bg-primaryWhite dark:bg-gray">
+        <header className={styles.header}>
+          <div className="logo">
+            {theme === "dark" ? (
+              <Link href="/">
+                <Image
+                  src={darkLogo}
+                  alt="Porftolio logo.En hvit E med en lakserosa dott/punktum."
+                />
+              </Link>
+            ) : (
+              <Link href="/">
+                <Image
+                  src={lightLogo}
+                  alt="Porftolio logo. En mørk E med en lakserosa dott/punktum."
+                />
+              </Link>
+            )}
+          </div>
+          <div className="flex">
+            <BurgerBtn menuFunction={menuFunction} />
+            <ThemeThoggle />
+          </div>
+          <div className={menuState}>
+            <nav role="navigation">
+              <ul className="font-serif">
+                <li className="">
+                  <Link href="#prosjekter">
+                    Prosjekter<span className="text-accent">.</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#om">
+                    Om meg<span className="text-accent">.</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#kontakt">
+                    Kontakt<span className="text-accent">.</span>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </div>
 
       <div className="container">{children}</div>
       {/* <Footer /> */}

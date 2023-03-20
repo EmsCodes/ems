@@ -13,6 +13,7 @@ module.exports = {
 
   theme: {
     colors: {
+      dark: "#C4AE96",
       blue: "#1fb6ff",
       purple: "#7e5bef",
       accent: "#F56457",
@@ -20,9 +21,10 @@ module.exports = {
       orange: "#ff7849",
       green: "#13ce66",
       yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
+      secondaryGray: "#505050",
+      gray: "#252525",
+      primaryWhite: "#F7F7F7",
+      gray_light: "#d3dce6",
     },
     fontFamily: {
       sans: ["Lato", "sans-serif"],
