@@ -35,31 +35,30 @@ when the darkmode/ligtmode button is clicked */
           rel="stylesheet"
         />
       </Head>
-      <main className="main">
-        <div>
-          <Heading style="font-serif flex-row">
-            <div className="text-accent">Frontend-Developer</div>
-            <div className="text-6xl font-black">Endre Makra-Stenkløv</div>
-          </Heading>
-          <p>
-            Med fokus på design og brukervennlighet
-            <span className="text-accent">.</span>
-          </p>
+      <main>
+        <div className=" bg-primaryWhite dark:bg-gray w-screen">
+          <section className={styles.mainSection}>
+            <Heading style="font-serif flex-row">
+              <span className="text-accent">Frontend-Developer</span>
+              <span className="font-black">Endre Makra-Stenkløv</span>
+            </Heading>
+            <p>
+              Med fokus på design og brukervennlighet
+              <span className="text-accent">.</span>
+            </p>
+            <div className="">
+              <p className={styles.services}></p>
+              <Image src={dots} aria-hidden="true" />
+            </div>
+            <div className={styles.ctaContainer}>
+              <Cta link="/test" text="Prosjekter" style="primaryCta" />
+              <Cta link="/test" text="Om meg" style="secondaryCta" />
+            </div>
+            <div></div>
+          </section>
         </div>
+        <section></section>
       </main>
-
-      {/* <main className="mode">
-        <section>
-          <Heading content="Frontend-developer Endre Makra-Stenkløv" />
-          <p>Med fokus på design og brukervennlige løsninger</p>
-          <Image src={dots} />
-
-          <div className="">
-            <Cta link="/test" text="Prosjekter" />
-            <Cta link="/test" text="Om meg" />
-          </div>
-        </section>
-      </main> */}
     </Layout>
   );
 }
