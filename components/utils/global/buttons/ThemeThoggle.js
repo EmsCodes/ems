@@ -12,7 +12,7 @@ function ThemeToggle() {
   to fix possible hydration mismatch: 
   "This is because we cannot know the theme on the server,
   so it will always be undefined until mounted on the client.
-  TO fix this, make sure you only render UI that uses the current 
+  To fix this, make sure you only render UI that uses the current 
   theme when the page is mounted on the client
   */
 
