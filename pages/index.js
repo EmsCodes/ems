@@ -42,13 +42,15 @@ when the darkmode/ligtmode button is clicked */
               <span className="text-accent">Frontend-Developer</span>
               <span className="font-black">Endre Makra-Stenkløv</span>
             </Heading>
-            <p>
+            {/* <p>
               Med fokus på design og brukervennlighet
               <span className="text-accent">.</span>
-            </p>
-            <div className="">
-              <p className={styles.services}></p>
+            </p> */}
+            <div className={styles.dotContainer}>
               <Image src={dots} aria-hidden="true" />
+              <p className={styles.services}>
+                <span className="text-accent">.</span>
+              </p>
             </div>
             <div className={styles.ctaContainer}>
               <Cta link="/test" text="Prosjekter" style="primaryCta" />
@@ -57,7 +59,17 @@ when the darkmode/ligtmode button is clicked */
             <div></div>
           </section>
         </div>
-        <section></section>
+        <div className="bg-primaryWhite dark:bg-secondaryGray w-screen">
+          <section className={styles.ferdigheterSection}>
+            <Heading size="2" style={styles.h2}>
+              Ferdigheter<span className="text-accent">.</span>
+            </Heading>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et.
+            </p>
+          </section>
+        </div>
       </main>
     </Layout>
   );

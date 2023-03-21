@@ -1,7 +1,7 @@
 .mainSection {
   width: 85%;
   margin: 0 auto;
-  padding-top: 10vh;
+  padding-top: 40px;
   height: 100vh;
   text-align: center;
 
@@ -12,6 +12,7 @@
 
     :first-child {
       font-size: 1.2em;
+      font-family: var(--font-secondary);
     }
     :nth-child(2) {
       font-size: 1.5em;
@@ -20,49 +21,79 @@
   }
 }
 
+.dotContainer {
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 25px;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+// CTA top section
+.ctaContainer {
+  width: 95%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+// changing text animation top section
 .services {
   font-family: var(--serif-font);
   margin-top: 25px;
   font-size: 1em;
-  //   animation: fadeIn 2s ease-in-out;
+  height: 12vh;
+  //   animation: fadeIn 5s infinite;
 }
 
-.services::after {
+.services::before {
   content: "";
-  animation: changingText 10s infinite;
+  animation: changingText 7s infinite;
 }
-
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
 
 @keyframes changingText {
   0% {
-    content: "Webutvikling";
+    content: "Med fokus på design og brukervennlighet";
   }
-  25% {
+  20% {
     content: "UX/UI";
   }
-  50% {
+  40% {
     content: "Web design";
   }
-  75% {
+  60% {
     content: "Tilgjengelighet/WCAG";
   }
-  100% {
+  80% {
     content: "Webutvikling";
+  }
+
+  100% {
+    content: "Med fokus på design og brukervennlighet";
   }
 }
 
-.ctaContainer {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 50px;
+.ferdigheterSection {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 50px;
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  p {
+    margin-top: 20px;
+  }
 }

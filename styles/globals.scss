@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 $font-headings: "Playfair Display", serif;
+$font-secondary: "Lato", sans-serif;
 
 $color-bg-dark: #252525;
 $color-bg-secondary-dark: #353535;
@@ -14,11 +15,20 @@ $color-text-light: #353535;
 
 :root {
   --serif-font: #{$font-headings};
+  --font-secondary: #{$font-secondary};
   --primary-dark-bg: #{$color-bg-dark};
   --primary-light-bg: #{$color-bg-light};
   --color-text-secondary: #{$color-accent-pink};
 }
-
+// typography
+h1,
+h2,
+h3 {
+  font-family: $font-headings;
+}
+// * {
+//   border: 1px solid green;
+// }
 // CTA
 @mixin basic-cta-style {
   padding: 15px 25px;
