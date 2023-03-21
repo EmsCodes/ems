@@ -46,7 +46,6 @@
 
 // changing text animation top section
 .services {
-  font-family: var(--serif-font);
   margin-top: 25px;
   font-size: 1em;
   height: 12vh;
@@ -55,7 +54,9 @@
 
 .services::before {
   content: "";
-  animation: changingText 7s infinite;
+  //   animation: changingText 8s infinite;
+  font-family: var(--font-secondary);
+  font-weight: 500;
 }
 @keyframes fadeIn {
   0% {

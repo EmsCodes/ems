@@ -4,7 +4,7 @@ import lightLogo from "../../../public/images/icons/logo-light-mode.png";
 import darkLogo from "../../../public/images/icons/logo-dark-mode.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import ThemeThoggle from "@/components/utils/global/buttons/ThemeThoggle";
+import ThemeToggle from "@/components/utils/global/buttons/ThemeThoggle";
 import styles from "../sections/Header.module.scss";
 import BurgerBtn from "@/components/utils/global/buttons/BurgerBtn";
 
@@ -61,7 +61,7 @@ when the darkmode/ligtmode button is clicked */
           </div>
           <div className="flex">
             <BurgerBtn menuFunction={menuFunction} />
-            <ThemeThoggle />
+            <ThemeToggle />
           </div>
           <div className={menuState}>
             <nav role="navigation">

@@ -39,7 +39,7 @@ when the darkmode/ligtmode button is clicked */
         <div className=" bg-primaryWhite dark:bg-gray w-screen">
           <section className={styles.mainSection}>
             <Heading style="font-serif flex-row">
-              <span className="text-accent">Frontend-Developer</span>
+              <span className="text-accent">Frontend-utvikler</span>
               <span className="font-black">Endre Makra-Stenkløv</span>
             </Heading>
             {/* <p>
