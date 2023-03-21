@@ -7,7 +7,8 @@ import styles from "../buttons/ThemeToggle.module.scss";
 
 function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
+
   /* 
   to fix possible hydration mismatch: 
   "This is because we cannot know the theme on the server,
@@ -27,6 +28,8 @@ function ThemeToggle() {
   /* a variable which will check the current system preference, 
 or will change the theme based on userpreference 
 when the darkmode/ligtmode button is clicked */
+  //så hvis theme er fra systemet/preferred theme så returneres verdien av systemTheme
+  //hvis ikke så er current theme hva enn verdien av theme er, altså "dark" eller "light"
   const currentTheme = theme === "system" ? systemTheme : theme;
   return (
     <div className="test flex justify-center">

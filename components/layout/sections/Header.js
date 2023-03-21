@@ -10,7 +10,7 @@ import BurgerBtn from "@/components/utils/global/buttons/BurgerBtn";
 
 function Header({ children }) {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
 
   const [menuState, setMenuState] = useState(styles.hideMenu);
 

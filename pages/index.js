@@ -3,14 +3,14 @@ import Heading from "@/components/utils/global/heading/Heading";
 import styles from "../styles/Home.module.scss";
 import Layout from "@/components/layout/sections/Header";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { useTheme, systemTheme } from "next-themes";
 import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
 
   useEffect(() => {
     //useEffect only rund on client side

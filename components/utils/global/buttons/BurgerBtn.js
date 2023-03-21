@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 
 function BurgerBtn({ menuFunction }) {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { systemTheme, theme } = useTheme();
 
   useEffect(() => {
     //useEffect only run on client side
