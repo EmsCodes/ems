@@ -7,6 +7,7 @@ import { useTheme, systemTheme } from "next-themes";
 import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
+import Technologies from "@/components/utils/global/elements/Technologies";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -36,40 +37,40 @@ when the darkmode/ligtmode button is clicked */
         />
       </Head>
       <main>
-        <div className=" bg-primaryWhite dark:bg-gray w-screen">
-          <section className={styles.mainSection}>
-            <Heading style="font-serif flex-row">
-              <span className="text-accent">Frontend-utvikler</span>
-              <span className="font-black">Endre Makra-Stenkløv</span>
-            </Heading>
-            {/* <p>
+        <section className={styles.mainSection}>
+          <Heading style="font-serif flex-row">
+            <span className="text-accent">Frontend-utvikler</span>
+            <span className="font-black">Endre Makra-Stenkløv</span>
+          </Heading>
+          {/* <p>
               Med fokus på design og brukervennlighet
               <span className="text-accent">.</span>
             </p> */}
-            <div className={styles.dotContainer}>
-              <Image src={dots} aria-hidden="true" />
-              <p className={styles.services}>
-                <span className="text-accent">.</span>
-              </p>
-            </div>
-            <div className={styles.ctaContainer}>
-              <Cta link="/test" text="Prosjekter" style="primaryCta" />
-              <Cta link="/test" text="Om meg" style="secondaryCta" />
-            </div>
-            <div></div>
-          </section>
-        </div>
-        <div className="bg-primaryWhite dark:bg-secondaryGray w-screen">
-          <section className={styles.ferdigheterSection}>
-            <Heading size="2" style={styles.h2}>
-              Ferdigheter<span className="text-accent">.</span>
-            </Heading>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et.
+          <div className={styles.dotContainer}>
+            <Image src={dots} aria-hidden="true" />
+            <p className={styles.services}>
+              <span className="text-accent">.</span>
             </p>
-          </section>
-        </div>
+          </div>
+          <div className={styles.ctaContainer}>
+            <Cta link="/test" text="Prosjekter" style="primaryCta" />
+            <Cta link="/test" text="Om meg" style="secondaryCta" />
+          </div>
+          <div></div>
+        </section>
+
+        <section className={styles.skillsSection}>
+          <Heading size="2" style={styles.h2}>
+            Ferdigheter<span className="text-accent">.</span>
+          </Heading>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et.
+          </p>
+          <div className={styles.technologies}>
+            <Technologies />
+          </div>
+        </section>
       </main>
     </Layout>
   );

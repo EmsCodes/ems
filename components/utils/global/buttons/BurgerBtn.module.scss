@@ -5,20 +5,22 @@
   border-radius: 50%;
   margin-left: 3vw;
   margin-top: 10px;
+  z-index: 10;
 }
 .circleContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .one,
 .three {
   width: 40px;
   height: 2px;
   margin: 5px 0;
   border-radius: 10px;
-  background-color: black;
 }
+
 .circle {
   width: 7px;
   height: 7px;
@@ -32,22 +34,4 @@
   height: 2px;
   margin: 8px 0;
   border-radius: 10px;
-  background-color: #000;
-}
-
-// darkBurger
-.darkOne,
-.darkThree {
-  width: 40px;
-  height: 2px;
-  margin: 5px 0;
-  border-radius: 10px;
-  background-color: white;
-}
-.darkTwo {
-  width: 27px;
-  height: 2px;
-  margin: 8px 0;
-  border-radius: 10px;
-  background: white;
 }

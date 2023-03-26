@@ -35,6 +35,9 @@ when the darkmode/ligtmode button is clicked */
     <div className="test flex justify-center">
       <div className={styles.btn}>
         <input
+          aria-label="Open menu"
+          //checked conditional sørger for at rett knapp/stil vises når det er darkmode, selv ved reload.
+          checked={currentTheme === "dark" ? "true" : ""}
           id="darkmode-toggle"
           type="checkbox"
           className="sr-only"
@@ -43,9 +46,13 @@ when the darkmode/ligtmode button is clicked */
           }
         ></input>
         <label
+          aria-hidden="true"
           for="darkmode-toggle"
-          title={theme === "dark" ? "Light theme" : "Dark theme"}
+          title={
+            theme === "dark" ? "Bytt til lyst tema" : "Bytt til mørkt tema"
+          }
         >
+          {/* Knapp for lyst tema og mørkt tema på nettsiden. */}
           {/* <Image src={sun} alt="sun icon for light mode" height={30} width={30} /> */}
         </label>
       </div>

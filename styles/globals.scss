@@ -6,21 +6,35 @@ $font-headings: "Playfair Display", serif;
 $font-secondary: "Lato", sans-serif;
 
 $color-bg-dark: #252525;
-$color-bg-secondary-dark: #353535;
+$color-secondary-gray: #353535;
 $color-bg-accent-dark: #505050;
 $color-bg-light: #f7f7f7;
 $color-text-dark: #ede5d8;
 $color-accent-pink: #f56457;
 $color-text-light: #353535;
+$color-bg-secondary: #353535;
+
+@media screen and (prefers-color-scheme: light) {
+  $color-bg-secondary: $color-accent-pink;
+}
 
 :root {
   --serif-font: #{$font-headings};
   --font-secondary: #{$font-secondary};
   --primary-dark-bg: #{$color-bg-dark};
+  --secondary-bg: #{$color-bg-secondary};
   --primary-light-bg: #{$color-bg-light};
   --color-text-secondary: #{$color-accent-pink};
 }
 // typography
+
+body {
+  @apply bg-primary_white text-secondary_gray dark:bg-primary_gray dark:text-primary_white;
+}
+
+.bg-white {
+  background-color: $color-bg-light;
+}
 h1,
 h2,
 h3 {

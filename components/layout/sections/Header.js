@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import lightLogo from "../../../public/images/icons/logo-light-mode.png";
-import darkLogo from "../../../public/images/icons/logo-dark-mode.png";
+import darkLogo from "../../../public/images/images/new-logo.svg";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import ThemeToggle from "@/components/utils/global/buttons/ThemeThoggle";
@@ -40,52 +40,54 @@ when the darkmode/ligtmode button is clicked */
 
   return (
     <>
-      <div className="bg-primaryWhite dark:bg-gray">
-        <header className={styles.header}>
-          <div className="logo">
-            {theme === "dark" ? (
-              <Link href="/">
-                <Image
-                  src={darkLogo}
-                  alt="Porftolio logo.En hvit E med en lakserosa dott/punktum."
-                />
-              </Link>
-            ) : (
-              <Link href="/">
-                <Image
-                  src={lightLogo}
-                  alt="Porftolio logo. En mørk E med en lakserosa dott/punktum."
-                />
-              </Link>
-            )}
-          </div>
-          <div className="flex">
-            <BurgerBtn menuFunction={menuFunction} />
-            <ThemeToggle />
-          </div>
-          <div className={menuState}>
-            <nav role="navigation">
-              <ul className="font-serif">
-                <li className="">
-                  <Link href="#prosjekter">
-                    Prosjekter<span className="text-accent">.</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#om">
-                    Om meg<span className="text-accent">.</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#kontakt">
-                    Kontakt<span className="text-accent">.</span>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-      </div>
+      <header className={styles.header}>
+        <div className="logo">
+          {theme === "dark" ? (
+            <Link href="/">
+              <Image
+                src={darkLogo}
+                alt="Porftolio logo.En hvit E med en lakserosa dott/punktum."
+              />
+            </Link>
+          ) : (
+            <Link href="/">
+              <Image
+                src={lightLogo}
+                alt="Porftolio logo. En mørk E med en lakserosa dott/punktum."
+              />
+            </Link>
+          )}
+        </div>
+        <div className="flex">
+          <BurgerBtn menuFunction={menuFunction} />
+          <ThemeToggle />
+        </div>
+        <div className={menuState}>
+          <nav
+            role="navigation"
+            aria-label="main navigation"
+            // aria-expanded="true"
+          >
+            <ul className="font-serif">
+              <li className="">
+                <Link href="#prosjekter">
+                  Prosjekter<span className="text-accent">.</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="#om">
+                  Om meg<span className="text-accent">.</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="#kontakt">
+                  Kontakt<span className="text-accent">.</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       <div className="container">{children}</div>
       {/* <Footer /> */}
