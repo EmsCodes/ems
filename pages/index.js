@@ -9,17 +9,7 @@ import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/e.svg";
-import { register } from "swiper/element/bundle";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, EffectCube } from "swiper";
-
-// import "swiper/css";
-import {} from "swiper";
-import "swiper/swiper-bundle.min.css";
-// Import Swiper styles
-
-// register Swiper custom elements
-register();
+import Carousel from "@/components/utils/global/elements/Carousel";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -85,29 +75,11 @@ when the darkmode/ligtmode button is clicked */
             <Technologies />
           </div>
         </section>
-        <section className="p-32">
-          <Swiper
-            modules={[Navigation, Pagination, A11y, EffectCube]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            // effect={"cube"}
-            // cubeEffect={{
-            //   shadow: true,
-            //   slideShadows: true,
-            //   shadowOffset: 20,
-            //   shadowScale: 0.94,
-            // }}
-          >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-          </Swiper>
+        <section className={styles.carousel}>
+          <Heading size="3" style={styles.h3}>
+            Portfolio<span className="text-accent">.</span>
+          </Heading>
+          <Carousel />
         </section>
       </main>
     </Layout>
