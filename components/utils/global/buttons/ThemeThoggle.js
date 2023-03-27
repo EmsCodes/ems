@@ -52,8 +52,10 @@ when the darkmode/ligtmode button is clicked */
             theme === "dark" ? "Bytt til lyst tema" : "Bytt til mørkt tema"
           }
         >
-          {/* Knapp for lyst tema og mørkt tema på nettsiden. */}
-          {/* <Image src={sun} alt="sun icon for light mode" height={30} width={30} /> */}
+          {/* <Image
+            className={styles.modeIcon}
+            src={theme === "dark" ? sun : moon}
+          /> */}
         </label>
       </div>
       {/* {currentTheme === "dark" ? (

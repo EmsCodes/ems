@@ -24,6 +24,7 @@ function Technologies() {
           title="Html logo"
         />
       </div>
+
       <div className="bg-light_beige dark:bg-light_gray">
         <Image src={jsIcon} alt="orange HTML icon" className="" />
       </div>

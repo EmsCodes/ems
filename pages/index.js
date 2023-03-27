@@ -8,6 +8,18 @@ import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
+import eLetter from "../public/images/images/e.svg";
+// import { register } from "swiper/element/bundle";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
+
+// import "swiper/css";
+import {} from "swiper";
+import "swiper/swiper-bundle.min.css";
+// Import Swiper styles
+
+// register Swiper custom elements
+// register();
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -21,6 +33,7 @@ export default function Home() {
   if (!mounted) {
     return null;
   }
+
   /* a variable which will check the current system preference, 
 or will change the theme based on userpreference 
 when the darkmode/ligtmode button is clicked */
@@ -42,10 +55,12 @@ when the darkmode/ligtmode button is clicked */
             <span className="text-accent">Frontend-utvikler</span>
             <span className="font-black">Endre Makra-Stenkløv</span>
           </Heading>
-          {/* <p>
-              Med fokus på design og brukervennlighet
-              <span className="text-accent">.</span>
-            </p> */}
+          <Image
+            className={styles.e}
+            src={eLetter}
+            aria-hidden="true"
+            alt="Stor e-bokstav i bakgrunnen av nettsiden"
+          />
           <div className={styles.dotContainer}>
             <Image src={dots} aria-hidden="true" />
             <p className={styles.services}>
@@ -58,7 +73,6 @@ when the darkmode/ligtmode button is clicked */
           </div>
           <div></div>
         </section>
-
         <section className={styles.skillsSection}>
           <Heading size="2" style={styles.h2}>
             Ferdigheter<span className="text-accent">.</span>
@@ -70,6 +84,30 @@ when the darkmode/ligtmode button is clicked */
           <div className={styles.technologies}>
             <Technologies />
           </div>
+        </section>
+        <section className="p-32">
+          <Swiper
+            modules={[Navigation, Pagination, A11y, EffectCube]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+            // effect={"cube"}
+            // cubeEffect={{
+            //   shadow: true,
+            //   slideShadows: true,
+            //   shadowOffset: 20,
+            //   shadowScale: 0.94,
+            // }}
+          >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Slide 4</SwiperSlide>
+          </Swiper>
         </section>
       </main>
     </Layout>
