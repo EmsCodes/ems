@@ -11,7 +11,7 @@ import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/e.svg";
 // import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
+import { Navigation, Pagination, A11y, EffectCube } from "swiper";
 
 // import "swiper/css";
 import {} from "swiper";
