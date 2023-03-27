@@ -9,7 +9,7 @@ import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/e.svg";
-// import { register } from "swiper/element/bundle";
+import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, EffectCube } from "swiper";
 
@@ -19,7 +19,7 @@ import "swiper/swiper-bundle.min.css";
 // Import Swiper styles
 
 // register Swiper custom elements
-// register();
+register();
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
