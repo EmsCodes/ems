@@ -77,10 +77,10 @@ when the darkmode/ligtmode button is clicked */
           <Heading size="2" style={styles.h2}>
             Ferdigheter<span className="text-accent">.</span>
           </Heading>
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et.
-          </p>
+          </p> */}
           <div className={styles.technologies}>
             <Technologies />
           </div>
