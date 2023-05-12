@@ -47,7 +47,7 @@ when the darkmode/ligtmode button is clicked */
         ></input>
         <label
           aria-hidden="true"
-          for="darkmode-toggle"
+          htmlFor="darkmode-toggle"
           title={
             theme === "dark" ? "Bytt til lyst tema" : "Bytt til mørkt tema"
           }

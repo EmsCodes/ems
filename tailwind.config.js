@@ -22,7 +22,7 @@ module.exports = {
       green: "#13ce66",
       yellow: "#ffc82c",
       secondary_gray: "#353535",
-      primary_gray: "#252525",
+      primary_gray: "#202020",
       primary_white: "#F7F7F7",
       light_gray: "#505050",
       white: "#fff",

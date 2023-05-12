@@ -13,10 +13,11 @@ $color-text-dark: #ede5d8;
 $color-accent-pink: #f56457;
 $color-text-light: #353535;
 $color-bg-secondary: #353535;
+$primary-text: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320)));
 
-@media screen and (prefers-color-scheme: light) {
-  $color-bg-secondary: $color-accent-pink;
-}
+// @media screen and (prefers-color-scheme: light) {
+//   $color-bg-secondary: $color-accent-pink;
+// }
 
 :root {
   --serif-font: #{$font-headings};
@@ -25,6 +26,7 @@ $color-bg-secondary: #353535;
   --secondary-bg: #{$color-bg-secondary};
   --primary-light-bg: #{$color-bg-light};
   --color-text-secondary: #{$color-accent-pink};
+  --primary-text: #{$primary-text};
 }
 // typography
 
@@ -46,7 +48,6 @@ h3 {
 // CTA
 @mixin basic-cta-style {
   padding: 15px 25px;
-  border-radius: 30px;
 }
 
 .primaryCta {
@@ -57,4 +58,14 @@ h3 {
 .secondaryCta {
   @include basic-cta-style;
   border: 1px solid $color-accent-pink;
+}
+
+//Swiper
+
+.swiper-pagination-bullet-active {
+  background-color: var(color-text-secondary) !important;
+}
+.swiper-pagination-bullet {
+  width: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
+  height: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
 }

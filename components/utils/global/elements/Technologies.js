@@ -16,7 +16,8 @@ import adobexdIcon from "/public/images/icons/adobexd-logo.svg";
 function Technologies() {
   return (
     <>
-      <div className="bg-light_beige dark:bg-light_gray">
+      {/* bg-primary_white border border-primary_gray */}
+      <div className="">
         <Image
           src={htmlIcon}
           alt="orange HTML icon"
@@ -24,32 +25,31 @@ function Technologies() {
           title="Html logo"
         />
       </div>
-
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={jsIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={bootstrapIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={reactIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={cssIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={sassIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={nextjsIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={wordpressIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={strapiIcon} alt="orange HTML icon" className="" />
       </div>
-      <div className="bg-light_beige dark:bg-light_gray">
+      <div className="">
         <Image src={npmIcon} alt="orange HTML icon" className="" />
       </div>
       {/* <div>

@@ -3,13 +3,15 @@ import Heading from "@/components/utils/global/heading/Heading";
 import styles from "../styles/Home.module.scss";
 import Layout from "@/components/layout/sections/Header";
 import { useEffect, useState } from "react";
-import { useTheme, systemTheme } from "next-themes";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/e.svg";
 import Carousel from "@/components/utils/global/elements/Carousel";
+import circle from "../public/images/images/portrait.svg";
+import portrait from "../public/images/images/me.png";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -53,33 +55,46 @@ when the darkmode/ligtmode button is clicked */
           />
           <div className={styles.dotContainer}>
             <Image src={dots} aria-hidden="true" />
-            <p className={styles.services}>
+            {/* <p className={styles.services}>
               <span className="text-accent">.</span>
-            </p>
+            </p> */}
           </div>
           <div className={styles.ctaContainer}>
             <Cta link="/test" text="Prosjekter" style="primaryCta" />
             <Cta link="/test" text="Om meg" style="secondaryCta" />
           </div>
-          <div></div>
+          <div className={styles.portrait}>
+            <Image src={circle} className={styles.circle} />
+            <Image src={portrait} className={styles.portrait} />
+          </div>
         </section>
         <section className={styles.skillsSection}>
           <Heading size="2" style={styles.h2}>
             Ferdigheter<span className="text-accent">.</span>
           </Heading>
-          {/* <p>
+          <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et.
-          </p> */}
+          </p>
           <div className={styles.technologies}>
             <Technologies />
           </div>
         </section>
         <section className={styles.carousel}>
-          <Heading size="3" style={styles.h3}>
-            Portfolio<span className="text-accent">.</span>
+          <Heading
+            size="3"
+            style={`${styles.h3} text-primary_gray dark:text-accent`}
+          >
+            Portfolio<span className="text-accent dark:text-white">.</span>
           </Heading>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et.
+          </p>
           <Carousel />
+        </section>
+        <section className={styles.about}>
+          <Heading size="4">Om meg</Heading>
         </section>
       </main>
     </Layout>

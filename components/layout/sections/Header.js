@@ -7,10 +7,12 @@ import { useTheme } from "next-themes";
 import ThemeToggle from "@/components/utils/global/buttons/ThemeThoggle";
 import styles from "../sections/Header.module.scss";
 import BurgerBtn from "@/components/utils/global/buttons/BurgerBtn";
+import BurgerIcon from "@/components/utils/global/buttons/BurgerIcon";
 
 function Header({ children }) {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme } = useTheme();
+  const [burgerMenu, setBurgerMenu] = useState(styles.burgerBtnContainer);
 
   const [menuState, setMenuState] = useState(styles.hideMenu);
 
@@ -26,6 +28,7 @@ function Header({ children }) {
   function menuFunction() {
     if (menuState === styles.hideMenu) {
       setMenuState(styles.showMenu);
+      () => {};
     } else {
       setMenuState(styles.hideMenu);
     }
@@ -58,7 +61,10 @@ when the darkmode/ligtmode button is clicked */
             </Link>
           )}
         </div>
-        <div className="flex">
+        <div className={burgerMenu}>
+          {/* <button onClick={menuFunction}>
+            {/* <BurgerIcon style={styles.burger} lineOne={styles.lineOne} /> */}
+          {/* </button> */}
           <BurgerBtn menuFunction={menuFunction} />
           <ThemeToggle />
         </div>
