@@ -10,8 +10,8 @@ import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/e.svg";
 import Carousel from "@/components/utils/global/elements/Carousel";
-import circle from "../public/images/images/portrait.svg";
-import portrait from "../public/images/images/me.png";
+import circle from "../public/images/images/sirkel.png";
+import portrait from "../public/images/images/portrett.jpeg";
 import About from "@/components/utils/global/elements/About";
 
 export default function Home() {
