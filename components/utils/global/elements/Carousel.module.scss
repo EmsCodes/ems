@@ -12,7 +12,9 @@
   text-align: center;
   background: pink;
 }
-
+.swiper-slide-active {
+  background-color: red !important;
+}
 .btnContainer {
   display: flex;
   justify-content: center;

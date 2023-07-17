@@ -197,9 +197,8 @@
 //carousel
 
 .carousel {
-  // width: 500px;
+  width: 500px;
   width: 100vw;
-
   p {
     margin-bottom: 50px;
     width: 85%;
@@ -217,7 +216,3 @@
 
   font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (2000 - 320)));
 }
-
-// .about {
-//   margin-top: 250px;
-// }

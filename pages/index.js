@@ -12,6 +12,7 @@ import eLetter from "../public/images/images/e.svg";
 import Carousel from "@/components/utils/global/elements/Carousel";
 import circle from "../public/images/images/portrait.svg";
 import portrait from "../public/images/images/me.png";
+import About from "@/components/utils/global/elements/About";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -93,9 +94,7 @@ when the darkmode/ligtmode button is clicked */
           </p>
           <Carousel />
         </section>
-        <section className={styles.about}>
-          <Heading size="4">Om meg</Heading>
-        </section>
+        <About />
       </main>
     </Layout>
   );
