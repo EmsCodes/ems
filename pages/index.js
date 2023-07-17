@@ -8,7 +8,7 @@ import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
 import Cta from "@/components/utils/global/buttons/Cta";
 import Technologies from "@/components/utils/global/elements/Technologies";
-import eLetter from "../public/images/images/e.svg";
+import eLetter from "../public/images/images/letter-e.svg";
 import Carousel from "@/components/utils/global/elements/Carousel";
 import circle from "../public/images/images/sirkel.png";
 import portrait from "../public/images/images/portrett.jpeg";
