@@ -21,6 +21,19 @@
   border-radius: 10px;
 }
 
+.test {
+  animation: test 0.3s ease-in-out 1;
+}
+
+@keyframes test {
+  0% {
+    margin: 5px 0;
+  }
+  100% {
+    margin: 25px 0;
+  }
+}
+
 .circle {
   width: 7px;
   height: 7px;

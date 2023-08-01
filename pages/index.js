@@ -11,7 +11,7 @@ import Technologies from "@/components/utils/global/elements/Technologies";
 import eLetter from "../public/images/images/letter-e.svg";
 import Carousel from "@/components/utils/global/elements/Carousel";
 import circle from "../public/images/images/sirkel.png";
-import portrait from "../public/images/images/portrett.jpeg";
+import portrait from "../public/images/images/portrett.png";
 import About from "@/components/utils/global/elements/About";
 
 export default function Home() {
@@ -65,7 +65,6 @@ when the darkmode/ligtmode button is clicked */
             <Cta link="/test" text="Om meg" style="secondaryCta" />
           </div>
           <div className={styles.portrait}>
-            <Image src={circle} className={styles.circle} />
             <Image src={portrait} className={styles.portrait} />
           </div>
         </section>
