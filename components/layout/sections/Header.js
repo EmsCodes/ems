@@ -28,7 +28,6 @@ function Header({ children }) {
   function menuFunction() {
     if (menuState === styles.hideMenu) {
       setMenuState(styles.showMenu);
-      () => {};
     } else {
       setMenuState(styles.hideMenu);
     }
