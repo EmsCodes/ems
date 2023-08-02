@@ -75,12 +75,8 @@ function Carousel() {
         </div>
       </Swiper>
       <div className={styles.btnContainer}>
-        <button className={styles.button} ref={prevElRef}>
-          Prev
-        </button>
-        <button ref={nextElRef} className={styles.button}>
-          Next
-        </button>
+        <button className={styles.button} ref={prevElRef}></button>
+        <button ref={nextElRef} className={styles.button}></button>
       </div>
     </>
   );
