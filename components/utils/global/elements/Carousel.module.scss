@@ -12,11 +12,11 @@
   text-align: center;
   background: pink;
 }
-.swiper-slide-active {
-  background-color: red !important;
-}
+// .swiper-slide-active {
+//   background-color: yellow !important;
+// }
 .btnContainer {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 .button {
@@ -46,5 +46,13 @@
 @media screen and (min-width: 1000px) {
   .slide {
     width: 25vw;
+  }
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper {
+    cursor: pointer;
   }
 }

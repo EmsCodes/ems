@@ -64,8 +64,7 @@ h4 {
 //Swiper
 
 .swiper-pagination-bullet-active {
-  background-color: green !important;
-  // background-color: var(color-text-secondary) !important;
+  background-color: $color-accent-pink !important;
 }
 .swiper-pagination-bullet {
   width: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;

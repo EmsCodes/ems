@@ -73,8 +73,10 @@ when the darkmode/ligtmode button is clicked */
             Ferdigheter<span className="text-accent">.</span>
           </Heading>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et.
+            Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
+            technology and digital media, og ved selvstudier, tilegnet meg god
+            kunnskap om sentrale frontend teknologier og emner. Blant annet
+            UX/UI, WCAG/brukervennlighet, interaksjonsdesign og design.
           </p>
           <div className={styles.technologies}>
             <Technologies />
@@ -87,10 +89,7 @@ when the darkmode/ligtmode button is clicked */
           >
             Portfolio<span className="text-accent dark:text-white">.</span>
           </Heading>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et.
-          </p>
+          {/* <p>Noen av mine prosjekter</p> */}
           <Carousel />
         </section>
         <About />

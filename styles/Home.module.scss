@@ -33,14 +33,34 @@
     height: 50vw;
     margin: 0 auto;
     margin-top: 50px;
-    border-radius: 100%;
+    // border-radius: 100px 50px 175px 100px;
+    clip-path: polygon(50% 0%, 100% 20%, 75% 100%, 25% 100%, 0% 40%);
 
     img {
       position: absolute;
-      top: 0;
-      object-fit: cover;
-      object-position: center 25%;
-      background: var(--color-text-secondary);
+      padding: 25px;
+      object-fit: contain;
+      background: linear-gradient(
+        -65deg,
+        #f1766a,
+        var(--color-text-secondary),
+        #23a6d5,
+        #23d5ab
+      );
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   }
 }
@@ -166,6 +186,7 @@
     margin-bottom: 50px;
     max-width: 500px;
     text-align: center;
+    font-weight: 100;
   }
 }
 
