@@ -29,9 +29,11 @@
   }
   .portrait {
     position: relative;
-    width: 50vw;
-    height: 50vw;
+    width: 75vw;
+    height: 75vw;
     margin: 0 auto;
+    max-width: 400px;
+    max-height: 400px;
     margin-top: 50px;
     // border-radius: 100px 50px 175px 100px;
     clip-path: polygon(50% 0%, 100% 20%, 75% 100%, 25% 100%, 0% 40%);
@@ -185,8 +187,8 @@
     margin-top: 20px;
     margin-bottom: 50px;
     max-width: 500px;
-    text-align: center;
     font-weight: 100;
+    width: 85%;
   }
 }
 
@@ -210,11 +212,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    &:nth-child(5) {
+      max-width: 58px;
+    }
     img {
       width: 100%;
       max-width: 100px;
-      height: auto;
       max-height: 100px;
     }
   }

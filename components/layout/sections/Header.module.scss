@@ -77,10 +77,12 @@
   //   transform: translateX(-50%);
   z-index: 1;
   // inset: 0;
-  left: 0;
-  right: 50%;
-  animation: scaleUp 0.5s ease-in;
-  background-color: rgba(0, 0, 0, 0.623);
+  height: 50vh;
+  left: 50vw;
+  top: 0;
+  right: 0;
+  animation: scaleUp 0.2s;
+  background: #353535;
   .burgerBtnOpen {
     display: flex;
 
@@ -91,9 +93,6 @@
       margin-left: 4vw;
       z-index: 10;
       order: 3;
-      svg g line {
-        stroke-width: 10;
-      }
 
       // line[data-name="Line 1"] {
       //   stroke-width: 10;
@@ -112,9 +111,9 @@
     margin-left: 4vw;
     z-index: 10;
     order: 3;
-    // line:first-of-type {
-    //   // stroke-width: 10;
-    // }
+    line:first-of-type {
+      stroke-width: 10;
+    }
     // line[data-name="Line 1"] {
     //   stroke-width: 10;
     // }
