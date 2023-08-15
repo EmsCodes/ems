@@ -2,7 +2,7 @@ import Head from "@/components/utils/global/head/Head";
 import Heading from "@/components/utils/global/heading/Heading";
 import styles from "../styles/Home.module.scss";
 import Layout from "@/components/layout/sections/Header";
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import dots from "../public/images/icons/dots.svg";
@@ -17,10 +17,57 @@ import About from "@/components/utils/global/elements/About";
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme } = useTheme();
+  const [scrollY, setScrollY] = useState(0);
+  const [right, setRight] = useState(0);
+
+  // console.log(scrollY);
+
+  const portraitPosition = useRef();
+  // const [x, setX] = useState();
+  // const [y, setY] = useState();
+
+  const getPosition = () => {
+    setRight(portraitPosition.current?.offsetRight);
+
+    console.log("right is " + right);
+    // const positionX = portraitPosition.current?.offsetTop;
+    // setX(positionX);
+    // const right = portraitPosition.current?.offsetright;
+    // setY(positionY);
+
+    // const elementSize = portraitPosition.current?.offsetHeight;
+
+    // const scrollPosition = window.scrollY;
+
+    // const windowHeight = window.innerHeight;
+    // let total = scrollPosition / windowHeight;
+
+    // // portraitPosition.style.offsetLeft =
+    // //   -(positionY * total * 1.25) + positionY + "px";
+    // // console.log(total);
+  };
 
   useEffect(() => {
-    //useEffect only rund on client side
+    //useEffect only run on client side
     setMounted(true);
+
+    // let right = portraitPosition.current?.offsetright;
+
+    getPosition();
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll);
+    // };
+
+    window.addEventListener("scroll", getPosition);
+    window.addEventListener("resize", getPosition);
+    // console.log("x = " + x, "and y = " + y);
   }, []);
 
   if (!mounted) {
@@ -64,8 +111,37 @@ when the darkmode/ligtmode button is clicked */
             <Cta link="/test" text="Prosjekter" style="primaryCta" />
             <Cta link="/test" text="Om meg" style="secondaryCta" />
           </div>
-          <div className={styles.portrait}>
-            <Image src={portrait} className={styles.portrait} />
+          <div>
+            <div
+              className={styles.portrait}
+              ref={portraitPosition}
+              style={{
+                left: scrollY > 0 ? scrollY + "px" : "",
+                top: scrollY > 0 ? scrollY + "px" : "",
+              }}
+            >
+              <Image src={portrait} className={styles.portrait} alt="text" />
+            </div>
+            <div className={styles.tjenester}>
+              <div>
+                <p>Med fokus på design og brukervennlighet</p>
+              </div>
+              <div>
+                <p>Web-design</p>
+              </div>
+              <div>
+                <p>UX/UI</p>
+              </div>
+              <div>
+                <p>Tilgjengelighet/WCAG</p>
+              </div>
+              <div>
+                <p>Web-design</p>
+              </div>
+              <div>
+                <p>Utvikling</p>
+              </div>
+            </div>
           </div>
         </section>
         <section className={styles.skillsSection}>

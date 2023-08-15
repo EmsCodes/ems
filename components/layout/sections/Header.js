@@ -33,7 +33,7 @@ function Header({ children }) {
     }
   }
 
-  console.log(theme);
+  // console.log(theme);
 
   /* a variable which will check the current system preference, 
 or will change the theme based on userpreference 

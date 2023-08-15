@@ -6,7 +6,7 @@ function About() {
     <section className={styles.about}>
       <Heading size="4">Om meg</Heading>
       <p>
-        Jeg er en nord-norsk frontend-utvikler som heter Endre Makra-Stenkløv.
+        Jeg heter Endre Makra-Stenkløv og er en nord-norsk frontend-utvikler.
         Oppvokst på Sortland, en liten by i Vesterålen, den mindre kjente naboen
         til Lofoten.
       </p>

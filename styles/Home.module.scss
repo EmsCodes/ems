@@ -1,11 +1,9 @@
 .mainSection {
+  overflow: hidden;
   width: 100vw;
   margin: 0 auto;
   padding-top: 40px;
-  height: 100vh;
   text-align: center;
-  position: relative;
-
   .e {
     position: absolute;
     width: 80vw;
@@ -29,12 +27,12 @@
   }
   .portrait {
     position: relative;
-    width: 75vw;
-    height: 75vw;
+    width: 60vw;
+    height: 60vw;
     margin: 0 auto;
     max-width: 400px;
     max-height: 400px;
-    margin-top: 50px;
+    margin-top: 3vh;
     // border-radius: 100px 50px 175px 100px;
     clip-path: polygon(50% 0%, 100% 20%, 75% 100%, 25% 100%, 0% 40%);
 
@@ -63,6 +61,14 @@
       100% {
         background-position: 0% 50%;
       }
+    }
+  }
+  .tjenester {
+    margin-top: 100px;
+    // height: 1000px;
+    p {
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
   }
 }
@@ -112,45 +118,36 @@
   }
 }
 
-@keyframes changingText {
-  0% {
-    content: "Med fokus på design og brukervennlighet";
-  }
-  20% {
-    content: "UX/UI";
-  }
-  40% {
-    content: "Web design";
-  }
-  60% {
-    content: "Tilgjengelighet/WCAG";
-  }
-  80% {
-    content: "Webutvikling";
-  }
+// @keyframes changingText {
+//   0% {
+//     content: "Med fokus på design og brukervennlighet";
+//   }
+//   20% {
+//     content: "UX/UI";
+//   }
+//   40% {
+//     content: "Web design";
+//   }
+//   60% {
+//     content: "Tilgjengelighet/WCAG";
+//   }
+//   80% {
+//     content: "Webutvikling";
+//   }
 
-  100% {
-    content: "Med fokus på design og brukervennlighet";
-  }
-}
+//   100% {
+//     content: "Med fokus på design og brukervennlighet";
+//   }
+// }
 
 //skills section
 
 .skillsSection {
   margin: 0 auto;
-  padding-top: 50px;
   width: 100vw;
   position: relative;
   z-index: 1;
 
-  ::after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    z-index: -2;
-    @apply dark:bg-secondary_gray #{!important};
-    opacity: 10%;
-  }
   //   ::before {
   //     position: absolute;
   //     content: "";
@@ -162,18 +159,6 @@
   //     z-index: -2;
   //   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
   h2 {
     font-size: 3em;
     font-weight: 900;
@@ -184,11 +169,12 @@
   }
   p {
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
+
     max-width: 500px;
     font-weight: 100;
-    width: 85%;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 }
 
