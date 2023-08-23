@@ -59,6 +59,7 @@ h4 {
 .secondaryCta {
   @include basic-cta-style;
   border: 1px solid $color-accent-pink;
+  margin-bottom: 100px;
 }
 
 //Swiper

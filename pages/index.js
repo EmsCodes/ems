@@ -13,61 +13,64 @@ import Carousel from "@/components/utils/global/elements/Carousel";
 import circle from "../public/images/images/sirkel.png";
 import portrait from "../public/images/images/portrett.png";
 import About from "@/components/utils/global/elements/About";
+import test from "./test";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme } = useTheme();
   const [scrollY, setScrollY] = useState(0);
-  const [right, setRight] = useState(0);
+  const [windowInnerHeight, setWindowInnerHeight] = useState(0);
+  const [element, setElement] = useState();
+  const [width, setWidth] = useState();
+  const refElement = useRef();
 
-  // console.log(scrollY);
+  // const element = element;
 
-  const portraitPosition = useRef();
+  // console.log(element);
+
+  if (element < 0) {
+    console.log("reached top of element");
+  }
+
+  // const testing = () => {
+  //   // const scrollPosition = scrollY + windowInnerHeight;
+
+  //   console.log(element);
+  // };
+
+  // const test = elementRight - width;
+
+  // console.log(size);
+  // console.log(size);
   // const [x, setX] = useState();
   // const [y, setY] = useState();
-
-  const getPosition = () => {
-    setRight(portraitPosition.current?.offsetRight);
-
-    console.log("right is " + right);
-    // const positionX = portraitPosition.current?.offsetTop;
-    // setX(positionX);
-    // const right = portraitPosition.current?.offsetright;
-    // setY(positionY);
-
-    // const elementSize = portraitPosition.current?.offsetHeight;
-
-    // const scrollPosition = window.scrollY;
-
-    // const windowHeight = window.innerHeight;
-    // let total = scrollPosition / windowHeight;
-
-    // // portraitPosition.style.offsetLeft =
-    // //   -(positionY * total * 1.25) + positionY + "px";
-    // // console.log(total);
-  };
 
   useEffect(() => {
     //useEffect only run on client side
     setMounted(true);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      setWindowInnerHeight(window.innerHeight);
+      // setSize(portraitPosition.current?.getBoundingClientRect().top);
+      // setSize(portraitPosition.current?.getBoundingClientRect());
+      setElement(refElement.current?.getBoundingClientRect().top);
+    };
+
+    // console.log(elementRight.left);
+    // console.log(elementRight.right);
+
+    // const leftPosition = size.left - size.right;
 
     // let right = portraitPosition.current?.offsetright;
 
-    getPosition();
-
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
+    // handleScroll();
 
     window.addEventListener("scroll", handleScroll);
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
+    window.addEventListener("resize", handleScroll);
 
-    window.addEventListener("scroll", getPosition);
-    window.addEventListener("resize", getPosition);
-    // console.log("x = " + x, "and y = " + y);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   if (!mounted) {
@@ -111,36 +114,31 @@ when the darkmode/ligtmode button is clicked */
             <Cta link="/test" text="Prosjekter" style="primaryCta" />
             <Cta link="/test" text="Om meg" style="secondaryCta" />
           </div>
-          <div>
-            <div
-              className={styles.portrait}
-              ref={portraitPosition}
-              style={{
-                left: scrollY > 0 ? scrollY + "px" : "",
-                top: scrollY > 0 ? scrollY + "px" : "",
-              }}
-            >
-              <Image src={portrait} className={styles.portrait} alt="text" />
+          <div
+            className={styles.portrait}
+            ref={refElement}
+            style={{
+              left: scrollY > 225 ? scrollY - 225 + "px" : "",
+              top: scrollY > 225 ? scrollY - 225 + "px" : "",
+            }}
+          >
+            <Image src={portrait} className={styles.portrait} alt="text" />
+          </div>
+          <div className={styles.tjenester}>
+            <div>
+              <p>Med fokus på design og brukervennlighet</p>
             </div>
-            <div className={styles.tjenester}>
-              <div>
-                <p>Med fokus på design og brukervennlighet</p>
-              </div>
-              <div>
-                <p>Web-design</p>
-              </div>
-              <div>
-                <p>UX/UI</p>
-              </div>
-              <div>
-                <p>Tilgjengelighet/WCAG</p>
-              </div>
-              <div>
-                <p>Web-design</p>
-              </div>
-              <div>
-                <p>Utvikling</p>
-              </div>
+            <div>
+              <p>Web-design</p>
+            </div>
+            <div>
+              <p>UX/UI</p>
+            </div>
+            <div>
+              <p>Tilgjengelighet/WCAG</p>
+            </div>
+            <div>
+              <p>Utvikling</p>
             </div>
           </div>
         </section>
