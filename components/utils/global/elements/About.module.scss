@@ -1,9 +1,17 @@
 .about {
+  width: 100vw;
+
+  padding-bottom: 50px;
+
+  p,
+  h4 {
+    width: 90%;
+    margin: 0 auto;
+  }
   h4 {
     font-weight: 100;
     margin: 0 auto;
     margin-bottom: 20px;
-    width: 85%;
 
     font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (2000 - 320)));
   }

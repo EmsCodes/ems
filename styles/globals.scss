@@ -59,7 +59,6 @@ h4 {
 .secondaryCta {
   @include basic-cta-style;
   border: 1px solid $color-accent-pink;
-  margin-bottom: 100px;
 }
 
 //Swiper
@@ -70,4 +69,41 @@ h4 {
 .swiper-pagination-bullet {
   width: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
   height: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
+}
+
+//animations
+
+.fade {
+  opacity: 0%;
+  top: 100%;
+  position: relative;
+  animation: elementFadeOut 0.7s ease-in 1;
+}
+
+.fadeIn {
+  position: relative;
+  animation: elementFadeIn 1s 1;
+}
+
+@keyframes elementFadeOut {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes elementFadeIn {
+  0% {
+    opacity: 0%;
+    top: 100%;
+  }
+  25% {
+    top: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }

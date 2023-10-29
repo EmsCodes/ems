@@ -1,22 +1,31 @@
 //carousel
 
 .swiper {
-  height: 50vh;
+  height: 35vh;
+  min-height: 300px;
   width: 100%;
   margin: 0 auto;
   cursor: grab;
 }
+// .swiper-slides {
 
+//   img {
+//     height: 100%;
+//   }
+// }
 .slide {
-  width: 100vw;
+  width: 100%;
   text-align: center;
-  background: pink;
+  background: white;
+  height: 100%;
 }
 // .swiper-slide-active {
 //   background-color: yellow !important;
 // }
 .btnContainer {
-  display: none;
+  // display: none;
+  // justify-content: center;
+  display: flex;
   justify-content: center;
 }
 .button {

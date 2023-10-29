@@ -1,6 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./Carousel.module.scss";
 import { useRef } from "react";
+import Image from "next/image";
+import prosjektEksamen from "../../../../public/images/images/holidaze.jpg";
+import handMade from "../../../../public/images/images/handmade.png";
+import theBean from "../../../../public/images/images/the-bean.png";
+import csm from "../../../../public/images/images/csm.jpg";
+import portfolio from "../../../../public/images/images/portfolio-2.png";
 import useSwiperRef from "../../../hooks/useSwiperRef.js";
 
 // modules import for swiper/carousel
@@ -66,17 +72,55 @@ function Carousel() {
         className={styles.swiper}
       >
         <div>
-          <SwiperSlide className={styles.slide}>Slide 1</SwiperSlide>
-          <SwiperSlide className={styles.slide}>Slide 2</SwiperSlide>
-          <SwiperSlide className={styles.slide}>Slide 3</SwiperSlide>
-          <SwiperSlide className={styles.slide}>Slide 4</SwiperSlide>
-          <SwiperSlide className={styles.slide}>Slide 5</SwiperSlide>
-          <SwiperSlide className={styles.slide}>Slide 6</SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <Link
+              target="_blank"
+              href="https://holidaze-zeta.vercel.app/accommodations"
+            >
+              <Image src={prosjektEksamen} />
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <Link
+              target="_blank"
+              href="https://handmade-semesterproject.netlify.app/"
+            >
+              <Image src={handMade} />
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <Link
+              target="_blank"
+              href="https://handmade-semesterproject.netlify.app/"
+            >
+              <Image src={csm} />
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <Link
+              target="_blank"
+              href="https://handmade-semesterproject.netlify.app/"
+            >
+              <Image src={theBean} />
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <Link
+              target="_blank"
+              href="https://handmade-semesterproject.netlify.app/"
+            >
+              <Image src={portfolio} />
+            </Link>
+          </SwiperSlide>
         </div>
       </Swiper>
       <div className={styles.btnContainer}>
-        <button className={styles.button} ref={prevElRef}></button>
-        <button ref={nextElRef} className={styles.button}></button>
+        <button className={styles.button} ref={prevElRef}>
+          Prev
+        </button>
+        <button ref={nextElRef} className={styles.button}>
+          Next
+        </button>
       </div>
     </>
   );

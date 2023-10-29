@@ -15,55 +15,52 @@ import portrait from "../public/images/images/portrett.png";
 import About from "@/components/utils/global/elements/About";
 import test from "./test";
 
+import elementInView from "@/components/hooks/InViewHook";
+
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme } = useTheme();
   const [scrollY, setScrollY] = useState(0);
   const [windowInnerHeight, setWindowInnerHeight] = useState(0);
+  const [windowInnerWidth, setWindowInnerWidth] = useState(0);
   const [element, setElement] = useState();
-  const [width, setWidth] = useState();
+  const [bottom, setBottom] = useState();
   const refElement = useRef();
 
-  // const element = element;
+  const options = {
+    root: null,
+    rootMargin: windowInnerHeight >= 500 + "px" ? "-100px" : "-350px",
+    // rootMargin: "-25%",
+    treshold: [1],
+  };
 
-  // console.log(element);
+  const [ref, isInView] = elementInView(options);
+
+  // let fadeOut = styles.visible;
 
   if (element < 0) {
-    console.log("reached top of element");
+    fadeOut = styles.fade;
   }
 
   // const testing = () => {
-  //   // const scrollPosition = scrollY + windowInnerHeight;
-
-  //   console.log(element);
+  //
   // };
 
-  // const test = elementRight - width;
-
-  // console.log(size);
-  // console.log(size);
-  // const [x, setX] = useState();
-  // const [y, setY] = useState();
+  // if (isInView) {
+  //   console.log("YES");
+  // }
 
   useEffect(() => {
     //useEffect only run on client side
     setMounted(true);
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
       setWindowInnerHeight(window.innerHeight);
-      // setSize(portraitPosition.current?.getBoundingClientRect().top);
-      // setSize(portraitPosition.current?.getBoundingClientRect());
-      setElement(refElement.current?.getBoundingClientRect().top);
+      setWindowInnerWidth(window.innerWidth);
+      setBottom(refElement.current?.getBoundingClientRect().right);
+      setElement(refElement.current?.getBoundingClientRect().bottom);
     };
-
-    // console.log(elementRight.left);
-    // console.log(elementRight.right);
-
-    // const leftPosition = size.left - size.right;
-
-    // let right = portraitPosition.current?.offsetright;
-
-    // handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
@@ -115,29 +112,44 @@ when the darkmode/ligtmode button is clicked */
             <Cta link="/test" text="Om meg" style="secondaryCta" />
           </div>
           <div
-            className={styles.portrait}
+            className={styles.portraitContainer}
             ref={refElement}
             style={{
-              left: scrollY > 225 ? scrollY - 225 + "px" : "",
-              top: scrollY > 225 ? scrollY - 225 + "px" : "",
+              left: scrollY > 300 ? scrollY - 300 + "px" : "",
+              top: scrollY > 300 ? scrollY - 300 + "px" : "",
             }}
           >
-            <Image src={portrait} className={styles.portrait} alt="text" />
+            <div
+              className={`${element < 0 ? styles.fade : ""} ${styles.portrait}`}
+            >
+              <Image src={portrait} className={styles.portrait} alt="text" />
+            </div>
           </div>
-          <div className={styles.tjenester}>
-            <div>
-              <p>Med fokus på design og brukervennlighet</p>
+          <div>
+            <div
+              ref={ref}
+              className={`${styles.tjenester} ${isInView ? "fadeIn" : "fade"}`}
+            >
+              <p>jada</p>
             </div>
-            <div>
-              <p>Web-design</p>
+            <div
+            // className={`${element < 75 ? styles.fade : ""}`}
+            >
+              <p></p>
             </div>
-            <div>
-              <p>UX/UI</p>
+            <div
+
+            // className={`${element < 75 ? styles.fade : ""}`}
+            >
+              <p></p>
             </div>
             <div>
               <p>Tilgjengelighet/WCAG</p>
             </div>
-            <div>
+            <div
+            // ref={refElement}
+            // className={`${element < 75 ? styles.fade : ""}`}
+            >
               <p>Utvikling</p>
             </div>
           </div>
