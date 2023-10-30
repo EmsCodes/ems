@@ -127,30 +127,24 @@ when the darkmode/ligtmode button is clicked */
           </div>
           <div>
             <div
-              ref={ref}
-              className={`${styles.tjenester} ${isInView ? "fadeIn" : "fade"}`}
+            // ref={ref}
+            // className={`${styles.tjenester} ${isInView ? "fadeIn" : "fade"}`}
             >
-              <p>jada</p>
+              <p>Utvikling</p>
             </div>
             <div
             // className={`${element < 75 ? styles.fade : ""}`}
             >
-              <p></p>
+              <p>Webdesign</p>
             </div>
             <div
 
             // className={`${element < 75 ? styles.fade : ""}`}
             >
-              <p></p>
+              <p>UX/UI</p>
             </div>
             <div>
               <p>Tilgjengelighet/WCAG</p>
-            </div>
-            <div
-            // ref={refElement}
-            // className={`${element < 75 ? styles.fade : ""}`}
-            >
-              <p>Utvikling</p>
             </div>
           </div>
         </section>
