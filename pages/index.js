@@ -125,7 +125,7 @@ when the darkmode/ligtmode button is clicked */
               <Image src={portrait} className={styles.portrait} alt="text" />
             </div>
           </div>
-          <div>
+          <div className={styles.tjenester}>
             <div
             // ref={ref}
             // className={`${styles.tjenester} ${isInView ? "fadeIn" : "fade"}`}
