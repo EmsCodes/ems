@@ -13,7 +13,7 @@ import Carousel from "@/components/utils/global/elements/Carousel";
 import circle from "../public/images/images/sirkel.png";
 import portrait from "../public/images/images/portrett.png";
 import About from "@/components/utils/global/elements/About";
-import test from "./test";
+import { Fade } from "react-awesome-reveal";
 
 import elementInView from "@/components/hooks/InViewHook";
 
@@ -126,25 +126,37 @@ when the darkmode/ligtmode button is clicked */
             </div>
           </div>
           <div className={styles.tjenester}>
-            <div
-            // ref={ref}
-            // className={`${styles.tjenester} ${isInView ? "fadeIn" : "fade"}`}
-            >
-              <p>Utvikling</p>
-            </div>
-            <div
-            // className={`${element < 75 ? styles.fade : ""}`}
-            >
-              <p>Webdesign</p>
-            </div>
-            <div
-
-            // className={`${element < 75 ? styles.fade : ""}`}
-            >
-              <p>UX/UI</p>
+            <div>
+              <Fade direction="left" triggerOnce fraction=".6" delay={250}>
+                <Image src={dots} aria-hidden="true" />
+              </Fade>
+              <Fade triggerOnce fraction=".6" delay={250}>
+                <p>Utvikling</p>
+              </Fade>
             </div>
             <div>
-              <p>Tilgjengelighet/WCAG</p>
+              <Fade triggerOnce fraction=".6">
+                <p>Webdesign</p>
+              </Fade>
+              <Fade direction="right" triggerOnce fraction=".6" delay={250}>
+                <Image src={dots} aria-hidden="true" />
+              </Fade>
+            </div>
+            <div>
+              <Fade direction="left" triggerOnce fraction=".6" delay={250}>
+                <Image src={dots} aria-hidden="true" />
+              </Fade>
+              <Fade triggerOnce fraction=".6" delay={250}>
+                <p>UX/UI</p>
+              </Fade>
+            </div>
+            <div>
+              <Fade triggerOnce fraction=".6">
+                <p>Tilgjengelighet/WCAG</p>
+              </Fade>
+              <Fade direction="right" fraction=".6" triggerOnce delay={250}>
+                <Image src={dots} aria-hidden="true" />
+              </Fade>
             </div>
           </div>
         </section>
@@ -152,15 +164,19 @@ when the darkmode/ligtmode button is clicked */
           <Heading size="2" style={styles.h2}>
             Ferdigheter<span className="text-accent">.</span>
           </Heading>
-          <p>
-            Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
-            technology and digital media, og ved selvstudier, tilegnet meg god
-            kunnskap om sentrale frontend teknologier og emner. Blant annet
-            UX/UI, WCAG/brukervennlighet, interaksjonsdesign og design.
-          </p>
-          <div className={styles.technologies}>
-            <Technologies />
-          </div>
+          <Fade triggerOnce fraction=".8">
+            <p>
+              Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
+              technology and digital media, og ved selvstudier, tilegnet meg god
+              kunnskap om sentrale frontend teknologier og emner. Blant annet
+              UX/UI, WCAG/brukervennlighet, interaksjonsdesign og design.
+            </p>
+          </Fade>
+          <Fade triggerOnce direction="up">
+            <div className={styles.technologies}>
+              <Technologies />
+            </div>
+          </Fade>
         </section>
         <section className={styles.carousel}>
           <Heading
