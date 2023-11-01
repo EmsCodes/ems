@@ -12,45 +12,69 @@ import strapiIcon from "/public/images/icons/strapi-logo.svg";
 import wordpressIcon from "/public/images/icons/wordpress-logo.svg";
 import npmIcon from "/public/images/icons/npm-logo.svg";
 import adobexdIcon from "/public/images/icons/adobexd-logo.svg";
+import { Fade } from "react-awesome-reveal";
 
 function Technologies() {
   return (
     <>
       {/* bg-primary_white border border-primary_gray */}
       <div className="">
-        <Image
-          src={htmlIcon}
-          alt="orange HTML icon"
-          className=""
-          title="Html logo"
-        />
+        <Fade triggerOnce>
+          <Image
+            src={htmlIcon}
+            alt="orange HTML icon"
+            className=""
+            title="Html logo"
+          />
+        </Fade>
       </div>
       <div className="">
-        <Image src={jsIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={100}>
+          <Image src={jsIcon} alt="orange HTML icon" className="" />
+        </Fade>
+      </div>
+
+      <div className="">
+        <Fade triggerOnce delay={200}>
+          <Image src={bootstrapIcon} alt="orange HTML icon" className="" />
+        </Fade>
+      </div>
+
+      <div className="">
+        <Fade triggerOnce delay={300}>
+          <Image src={reactIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       <div className="">
-        <Image src={bootstrapIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={400}>
+          <Image src={cssIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       <div className="">
-        <Image src={reactIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={500}>
+          <Image src={sassIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       <div className="">
-        <Image src={cssIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={600}>
+          <Image src={nextjsIcon} alt="orange HTML icon" className="" />
+        </Fade>
+      </div>
+
+      <div className="">
+        <Fade triggerOnce delay={700}>
+          <Image src={wordpressIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       <div className="">
-        <Image src={sassIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={800}>
+          <Image src={strapiIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       <div className="">
-        <Image src={nextjsIcon} alt="orange HTML icon" className="" />
-      </div>
-      <div className="">
-        <Image src={wordpressIcon} alt="orange HTML icon" className="" />
-      </div>
-      <div className="">
-        <Image src={strapiIcon} alt="orange HTML icon" className="" />
-      </div>
-      <div className="">
-        <Image src={npmIcon} alt="orange HTML icon" className="" />
+        <Fade triggerOnce delay={900}>
+          <Image src={npmIcon} alt="orange HTML icon" className="" />
+        </Fade>
       </div>
       {/* <div>
         <Image

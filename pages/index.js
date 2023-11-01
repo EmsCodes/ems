@@ -172,11 +172,9 @@ when the darkmode/ligtmode button is clicked */
               UX/UI, WCAG/brukervennlighet, interaksjonsdesign og design.
             </p>
           </Fade>
-          <Fade triggerOnce direction="up">
-            <div className={styles.technologies}>
-              <Technologies />
-            </div>
-          </Fade>
+          <div className={styles.technologies}>
+            <Technologies />
+          </div>
         </section>
         <section className={styles.carousel}>
           <Heading
