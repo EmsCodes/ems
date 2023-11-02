@@ -145,3 +145,24 @@
     background-color: none;
   }
 }
+
+@media only screen and (min-width: 750px) {
+  .header {
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .burgerBtnContainer {
+      order: 3;
+    }
+    .hideMenu {
+      position: static !important;
+    }
+    button {
+      display: none;
+    }
+  }
+}

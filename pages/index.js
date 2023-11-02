@@ -160,34 +160,38 @@ when the darkmode/ligtmode button is clicked */
             </div>
           </div>
         </section>
-        <section className={styles.skillsSection}>
-          <Heading size="2" style={styles.h2}>
-            Ferdigheter<span className="text-accent">.</span>
-          </Heading>
-          <Fade triggerOnce fraction=".8">
-            <p>
-              Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
-              technology and digital media, og ved selvstudier, tilegnet meg god
-              kunnskap om sentrale frontend teknologier og emner. Blant annet
-              UX/UI, WCAG/brukervennlighet, interaksjonsdesign og design.
-            </p>
-          </Fade>
-          <div className={styles.technologies}>
-            <Technologies />
-          </div>
+        <div>
+          <section className={styles.skillsSection}>
+            <Heading size="2" style={styles.h2}>
+              Ferdigheter<span className="text-accent">.</span>
+            </Heading>
+            <Fade triggerOnce fraction=".8">
+              <p>
+                Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
+                technology and digital media, og ved selvstudier, tilegnet meg
+                god kunnskap om sentrale frontend teknologier og emner. Blant
+                annet UX/UI, WCAG/brukervennlighet, interaksjonsdesign og
+                design.
+              </p>
+            </Fade>
+            <div className={styles.technologies}>
+              <Technologies />
+            </div>
+          </section>
+          <section className={styles.carousel}>
+            <Heading
+              size="3"
+              style={`${styles.h3} text-primary_gray dark:text-accent`}
+            >
+              Portfolio<span className="text-accent dark:text-white">.</span>
+            </Heading>
+            {/* <p>Noen av mine prosjekter</p> */}
+            <Carousel />
+          </section>
+        </div>
+        <section>
+          <About />
         </section>
-        <section className={styles.carousel}>
-          <Heading
-            size="3"
-            style={`${styles.h3} text-primary_gray dark:text-accent`}
-          >
-            Portfolio<span className="text-accent dark:text-white">.</span>
-          </Heading>
-          {/* <p>Noen av mine prosjekter</p> */}
-          <Carousel />
-        </section>
-
-        <About />
       </main>
     </Layout>
   );
