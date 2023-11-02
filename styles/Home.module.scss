@@ -171,7 +171,6 @@
   margin-top: 100px;
   position: sticky;
   top: 10%;
-  z-index: 1;
 
   //   ::before {
   //     position: absolute;
@@ -188,8 +187,6 @@
     font-size: 3em;
     font-weight: 900;
     text-align: center;
-    position: static;
-    z-index: 4;
     font-size: calc(25px + (60 - 30) * ((100vw - 320px) / (2000 - 320)));
   }
   p {
@@ -236,8 +233,8 @@
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  position: static;
-  z-index: 100;
+  position: relative;
+  z-index: 10;
   width: 500px;
   width: 100vw;
   height: 100%;

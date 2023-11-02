@@ -67,6 +67,7 @@ h4 {
   background-color: $color-accent-pink !important;
 }
 .swiper-pagination-bullet {
+  position: absolute;
   width: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
   height: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
 }
