@@ -26,7 +26,7 @@ export default function Home() {
   const [element, setElement] = useState();
   const [bottom, setBottom] = useState();
   const refElement = useRef();
-
+  console.log(element);
   const options = {
     root: null,
     rootMargin: windowInnerHeight >= 500 + "px" ? "-100px" : "-350px",
@@ -59,7 +59,7 @@ export default function Home() {
       setWindowInnerHeight(window.innerHeight);
       setWindowInnerWidth(window.innerWidth);
       setBottom(refElement.current?.getBoundingClientRect().right);
-      setElement(refElement.current?.getBoundingClientRect().bottom);
+      setElement(refElement.current?.getBoundingClientRect().right);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -115,8 +115,8 @@ when the darkmode/ligtmode button is clicked */
             className={styles.portraitContainer}
             ref={refElement}
             style={{
-              left: scrollY > 300 ? scrollY - 300 + "px" : "",
-              top: scrollY > 300 ? scrollY - 300 + "px" : "",
+              left: scrollY > 0 ? scrollY - 0 + "px" : "",
+              top: scrollY > 10 ? scrollY - 0 + "px" : "",
             }}
           >
             <div
@@ -130,31 +130,31 @@ when the darkmode/ligtmode button is clicked */
               <Fade direction="left" triggerOnce fraction=".6" delay={250}>
                 <Image src={dots} aria-hidden="true" />
               </Fade>
-              <Fade triggerOnce fraction=".6" delay={250}>
+              <Fade triggerOnce fraction="1">
                 <p>Utvikling</p>
               </Fade>
             </div>
             <div>
-              <Fade triggerOnce fraction=".6">
+              <Fade triggerOnce fraction="1">
                 <p>Webdesign</p>
               </Fade>
-              <Fade direction="right" triggerOnce fraction=".6" delay={250}>
+              <Fade direction="right" triggerOnce fraction="1" delay={250}>
                 <Image src={dots} aria-hidden="true" />
               </Fade>
             </div>
             <div>
-              <Fade direction="left" triggerOnce fraction=".6" delay={250}>
+              <Fade direction="left" triggerOnce fraction="1" delay={250}>
                 <Image src={dots} aria-hidden="true" />
               </Fade>
-              <Fade triggerOnce fraction=".6" delay={250}>
+              <Fade triggerOnce fraction="1" delay={250}>
                 <p>UX/UI</p>
               </Fade>
             </div>
             <div>
-              <Fade triggerOnce fraction=".6">
+              <Fade triggerOnce fraction="1">
                 <p>Tilgjengelighet/WCAG</p>
               </Fade>
-              <Fade direction="right" fraction=".6" triggerOnce delay={250}>
+              <Fade direction="right" fraction="1" triggerOnce delay={250}>
                 <Image src={dots} aria-hidden="true" />
               </Fade>
             </div>
@@ -186,6 +186,7 @@ when the darkmode/ligtmode button is clicked */
           {/* <p>Noen av mine prosjekter</p> */}
           <Carousel />
         </section>
+
         <About />
       </main>
     </Layout>
