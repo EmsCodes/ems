@@ -27,6 +27,8 @@ $primary-text: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320)));
   --primary-light-bg: #{$color-bg-light};
   --color-text-secondary: #{$color-accent-pink};
   --primary-text: #{$primary-text};
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-bullet-inactive-opacity: #{$color-bg-light};
 }
 // typography
 
@@ -67,44 +69,64 @@ h4 {
   background-color: $color-accent-pink !important;
 }
 .swiper-pagination-bullet {
-  position: absolute;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
   width: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
   height: calc(15px + (25 - 15) * ((100vw - 320px) / (2000 - 320))) !important;
 }
 
 //animations
 
-.fade {
-  opacity: 0%;
-  top: 100%;
-  position: relative;
-  animation: elementFadeOut 0.7s ease-in 1;
+.slide {
+  animation: slide 1.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  position: sticky;
+  top: 10%;
 }
 
-.fadeIn {
-  position: relative;
-  animation: elementFadeIn 1s 1;
-}
-
-@keyframes elementFadeOut {
-  0% {
-    opacity: 100%;
+@keyframes slide {
+  from {
+    left: 0;
   }
-
-  100% {
-    opacity: 0;
+  to {
+    left: 20%;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 18% 100%, 0% 38%);
   }
 }
 
-@keyframes elementFadeIn {
-  0% {
-    opacity: 0%;
-    top: 100%;
-  }
-  25% {
-    top: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
+// .fade {
+//   opacity: 50%;
+//   // opacity: 0%;
+//   // top: 100%;
+//   // position: relative;
+//   // animation: elementFadeOut 0.7s ease-in 1;
+// }
+
+// .fadeIn {
+//   // position: relative;
+//   opacity: 10%;
+//   // animation: elementFadeIn 1s 1;
+// }
+
+// @keyframes elementFadeOut {
+//   0% {
+//     opacity: 100%;
+//   }
+
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes elementFadeIn {
+//   0% {
+//     opacity: 0%;
+//     top: 100%;
+//   }
+//   25% {
+//     top: 0%;
+//   }
+//   100% {
+//     opacity: 100%;
+//   }
+// }

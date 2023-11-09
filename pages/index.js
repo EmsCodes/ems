@@ -25,30 +25,33 @@ export default function Home() {
   const [windowInnerWidth, setWindowInnerWidth] = useState(0);
   const [element, setElement] = useState();
   const [bottom, setBottom] = useState();
-  const refElement = useRef();
-  console.log(element);
+  // const refElement = useRef();
   const options = {
     root: null,
-    rootMargin: windowInnerHeight >= 500 + "px" ? "-100px" : "-350px",
-    // rootMargin: "-25%",
+    rootMargin: "-25%",
     treshold: [1],
   };
 
+  console.log(element);
   const [ref, isInView] = elementInView(options);
+  console.log(ref);
 
   // let fadeOut = styles.visible;
 
-  if (element < 0) {
-    fadeOut = styles.fade;
-  }
+  // if (element < 0) {
+  //   fadeOut = styles.fade;
+  // }
 
   // const testing = () => {
   //
   // };
 
-  // if (isInView) {
-  //   console.log("YES");
-  // }
+  if (isInView) {
+    console.log("YES");
+  }
+  if (!isInView) {
+    console.log("NO");
+  }
 
   useEffect(() => {
     //useEffect only run on client side
@@ -58,8 +61,8 @@ export default function Home() {
       setScrollY(window.scrollY);
       setWindowInnerHeight(window.innerHeight);
       setWindowInnerWidth(window.innerWidth);
-      setBottom(refElement.current?.getBoundingClientRect().right);
-      setElement(refElement.current?.getBoundingClientRect().right);
+      setBottom(ref.current?.getBoundingClientRect().right);
+      setElement(ref.current?.getBoundingClientRect().width);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -113,15 +116,13 @@ when the darkmode/ligtmode button is clicked */
           </div>
           <div
             className={styles.portraitContainer}
-            ref={refElement}
-            style={{
-              left: scrollY > 0 ? scrollY - 0 + "px" : "",
-              top: scrollY > 10 ? scrollY - 0 + "px" : "",
-            }}
+            ref={ref}
+            // style={{
+            //   left: isInView ? scrollY - + "px" : "",
+            //   // top: isInView ? scrollY + "px" : "",
+            // }}
           >
-            <div
-              className={`${element < 0 ? styles.fade : ""} ${styles.portrait}`}
-            >
+            <div className={`${styles.portrait} ${isInView ? "slide" : ""}`}>
               <Image src={portrait} className={styles.portrait} alt="text" />
             </div>
           </div>

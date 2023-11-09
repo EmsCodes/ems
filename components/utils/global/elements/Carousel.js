@@ -114,7 +114,7 @@ function Carousel() {
           </SwiperSlide>
         </div>
       </Swiper>
-      <div className={styles.btnContainer}>
+      <div className={`${styles.btnContainer} sr-only`}>
         <button className={styles.button} ref={prevElRef}>
           Prev
         </button>
