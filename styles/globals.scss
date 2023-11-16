@@ -32,6 +32,9 @@ $primary-text: calc(16px + (20 - 16) * ((100vw - 320px) / (2000 - 320)));
 }
 // typography
 
+// * {
+//   border: 1px solid red;
+// }
 body {
   @apply bg-primary_white text-secondary_gray dark:bg-primary_gray dark:text-primary_white;
 }
@@ -63,7 +66,7 @@ h4 {
   border: 1px solid $color-accent-pink;
 }
 
-//Swiper
+//Swiper/carousel
 
 .swiper-pagination-bullet-active {
   background-color: $color-accent-pink !important;
@@ -77,20 +80,31 @@ h4 {
 //animations
 
 .slide {
-  animation: slide 1.5s ease-in-out;
+  animation: slide 1.5s ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  position: sticky;
-  top: 10%;
+}
+.slideBack {
+  animation: slideBack 1.5s ease-out;
+  animation-iteration-count: 1;
+}
+.notVisible {
 }
 
 @keyframes slide {
   from {
-    left: 0;
+    right: 20%;
   }
   to {
-    left: 20%;
-    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 18% 100%, 0% 38%);
+    right: -25%;
+  }
+}
+@keyframes slideBack {
+  from {
+    right: -25%;
+  }
+  to {
+    right: 20%;
   }
 }
 

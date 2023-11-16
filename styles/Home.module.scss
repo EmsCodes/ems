@@ -1,10 +1,14 @@
 .mainSection {
+  // * {
+  //   border: 1px solid red;
+  // }
   overflow: hidden;
   // border: 1px solid red;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 8vh;
   width: 100vw;
   text-align: center;
+
   .e {
     display: none;
     // position: absolute;
@@ -30,44 +34,42 @@
   }
 
   .portraitContainer {
-    position: relative;
-    top: 10%;
     padding-bottom: 15vh;
     width: 100vw;
-    .visible {
+    left: inherit;
+
+    div:first-child {
+      width: 100%;
+      position: relative;
+      transition: all ease-in-out;
     }
-
     .portrait {
-      top: 15%;
-
+      position: static;
       // width: 60vw;
       // height: 60vw;
       // margin: 0 auto;
+      width: 50%;
+      right: 20%;
+
+      // transform: translateX(55%);
       left: inherit;
-      max-width: 300px;
-      max-height: 300px;
+      // max-width: 300px;
+      // max-height: 300px;
+      max-height: 25vh;
+      max-width: 500px;
+      // max-height: 300px;
       min-height: 300px;
-      min-width: 250px;
-      // border-radius: 100px 50px 175px 100px;
+      min-width: 300px;
+      // max-width: 350px;
+
       clip-path: polygon(50% 0%, 100% 20%, 75% 100%, 25% 100%, 0% 40%);
-
-      // animation: slide 1.5s ease-in-out;
-      // animation-iteration-count: 1;
-      // animation-fill-mode: forwards;
-
-      @keyframes slide {
-        from {
-          left: 0;
-        }
-        to {
-          left: 25%;
-        }
-      }
 
       img {
         position: absolute;
         padding: 25px;
+        top: 18%;
         object-fit: contain;
+        object-position: center;
 
         background: linear-gradient(
           -65deg,
@@ -96,7 +98,6 @@
   .tjenester {
     display: flex;
     flex-direction: column;
-    margin-top: 10vh;
     height: 100%;
     text-align: center;
     align-items: center;
@@ -260,7 +261,6 @@
   width: 500px;
   width: 100vw;
   height: 100%;
-  background-color: #ede5d8;
 
   div {
     width: 100vw;
@@ -282,4 +282,7 @@
 
     font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (2000 - 320)));
   }
+}
+
+@media only screen and (min-width: 500px) {
 }

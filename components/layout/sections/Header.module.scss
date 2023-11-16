@@ -16,7 +16,20 @@
     ul {
     }
     li {
-      //   border: 1px solid red;
+      background: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 1),
+          rgba(255, 0, 180, 1),
+          rgba(0, 100, 200, 1)
+        )
+        #202020;
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+      &:hover {
+        background-size: 0 3px, 100% 3px;
+      }
     }
     // li:first-of-type {
     //   padding-right: 15px;
@@ -152,6 +165,8 @@
       ul {
         display: flex;
         flex-direction: row;
+        gap: 50px;
+        margin-top: 20px;
       }
     }
 

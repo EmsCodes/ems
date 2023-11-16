@@ -28,13 +28,22 @@ export default function Home() {
   // const refElement = useRef();
   const options = {
     root: null,
-    rootMargin: "-25%",
+    rootMargin: "200px",
     treshold: [1],
   };
 
   console.log(element);
   const [ref, isInView] = elementInView(options);
   console.log(ref);
+
+  let slideStyle;
+
+  if (isInView) {
+    slideStyle = "slide";
+  }
+  // else if (scrollY >= 0) {
+  //    slideStyle = "slideBack";
+  //  }
 
   // let fadeOut = styles.visible;
 
@@ -46,9 +55,9 @@ export default function Home() {
   //
   // };
 
-  if (isInView) {
-    console.log("YES");
-  }
+  // } else if (!isInView) {
+  //   slideStyle = "slideBack";
+  // }
   if (!isInView) {
     console.log("NO");
   }
@@ -122,8 +131,10 @@ when the darkmode/ligtmode button is clicked */
             //   // top: isInView ? scrollY + "px" : "",
             // }}
           >
-            <div className={`${styles.portrait} ${isInView ? "slide" : ""}`}>
-              <Image src={portrait} className={styles.portrait} alt="text" />
+            <div>
+              <div className={`${styles.portrait} ${slideStyle}`}>
+                <Image src={portrait} className={styles.portrait} alt="text" />
+              </div>
             </div>
           </div>
           <div className={styles.tjenester}>
@@ -131,12 +142,12 @@ when the darkmode/ligtmode button is clicked */
               <Fade direction="left" triggerOnce fraction=".6" delay={250}>
                 <Image src={dots} aria-hidden="true" />
               </Fade>
-              <Fade triggerOnce fraction="1">
+              <Fade triggerOnce fraction="1" delay={250}>
                 <p>Utvikling</p>
               </Fade>
             </div>
             <div>
-              <Fade triggerOnce fraction="1">
+              <Fade triggerOnce fraction="1" delay={250}>
                 <p>Webdesign</p>
               </Fade>
               <Fade direction="right" triggerOnce fraction="1" delay={250}>
@@ -166,7 +177,7 @@ when the darkmode/ligtmode button is clicked */
             <Heading size="2" style={styles.h2}>
               Ferdigheter<span className="text-accent">.</span>
             </Heading>
-            <Fade triggerOnce fraction=".8">
+            <Fade triggerOnce fraction=".9" delay={200}>
               <p>
                 Jeg har gjennom en høyere fagskolegrad hos Noroff - School of
                 technology and digital media, og ved selvstudier, tilegnet meg
@@ -179,7 +190,9 @@ when the darkmode/ligtmode button is clicked */
               <Technologies />
             </div>
           </section>
-          <section className={styles.carousel}>
+          <section
+            className={`${styles.carousel} bg-primary_white dark:bg-primary_gray`}
+          >
             <Heading
               size="3"
               style={`${styles.h3} text-primary_gray dark:text-accent`}

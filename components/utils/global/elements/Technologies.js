@@ -29,50 +29,50 @@ function Technologies() {
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={100}>
+        <Fade triggerOnce delay={200}>
           <Image src={jsIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
 
       <div className="">
-        <Fade triggerOnce delay={200}>
+        <Fade triggerOnce delay={300}>
           <Image src={bootstrapIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
 
       <div className="">
-        <Fade triggerOnce delay={300}>
+        <Fade triggerOnce delay={400}>
           <Image src={reactIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={400}>
+        <Fade triggerOnce delay={500}>
           <Image src={cssIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={500}>
+        <Fade triggerOnce delay={600}>
           <Image src={sassIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={600}>
+        <Fade triggerOnce delay={700}>
           <Image src={nextjsIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
 
       <div className="">
-        <Fade triggerOnce delay={700}>
+        <Fade triggerOnce delay={800}>
           <Image src={wordpressIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={800}>
+        <Fade triggerOnce delay={900}>
           <Image src={strapiIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
       <div className="">
-        <Fade triggerOnce delay={900}>
+        <Fade triggerOnce delay={1000}>
           <Image src={npmIcon} alt="orange HTML icon" className="" />
         </Fade>
       </div>
