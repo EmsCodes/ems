@@ -3,7 +3,9 @@ import Heading from "../heading/Heading";
 
 function About() {
   return (
-    <section className={styles.about}>
+    <section
+      className={`${styles.about} bg-primary_white dark:bg-primary_gray `}
+    >
       <Heading size="4">Om meg</Heading>
       <p>
         Jeg heter Endre Makra-Stenkløv og er en nord-norsk frontend-utvikler.

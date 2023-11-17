@@ -202,10 +202,10 @@ when the darkmode/ligtmode button is clicked */
             {/* <p>Noen av mine prosjekter</p> */}
             <Carousel />
           </section>
+          <section>
+            <About />
+          </section>
         </div>
-        <section>
-          <About />
-        </section>
       </main>
     </Layout>
   );
