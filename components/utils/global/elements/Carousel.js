@@ -77,7 +77,7 @@ function Carousel() {
               target="_blank"
               href="https://holidaze-zeta.vercel.app/accommodations"
             >
-              <Image src={prosjektEksamen} />
+              <Image src={prosjektEksamen} loading="eager" />
             </Link>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
@@ -85,7 +85,7 @@ function Carousel() {
               target="_blank"
               href="https://handmade-semesterproject.netlify.app/"
             >
-              <Image src={handMade} />
+              <Image src={handMade} loading="eager" />
             </Link>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
@@ -93,7 +93,7 @@ function Carousel() {
               target="_blank"
               href="https://handmade-semesterproject.netlify.app/"
             >
-              <Image src={csm} />
+              <Image src={csm} loading="eager" />
             </Link>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
@@ -101,7 +101,7 @@ function Carousel() {
               target="_blank"
               href="https://handmade-semesterproject.netlify.app/"
             >
-              <Image src={theBean} />
+              <Image src={theBean} loading="eager" />
             </Link>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
@@ -109,7 +109,7 @@ function Carousel() {
               target="_blank"
               href="https://handmade-semesterproject.netlify.app/"
             >
-              <Image src={portfolio} />
+              <Image src={portfolio} loading="eager" />
             </Link>
           </SwiperSlide>
         </div>
