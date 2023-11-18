@@ -13,17 +13,8 @@ function Header({ children }) {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme } = useTheme();
   const [burgerMenu, setBurgerMenu] = useState(styles.burgerBtnContainer);
-
+  const [screenWidth, setScreenWidth] = useState();
   const [menuState, setMenuState] = useState(styles.hideMenu);
-
-  useEffect(() => {
-    //useEffect only run on client side
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   function menuFunction() {
     if (menuState === styles.hideMenu) {
@@ -31,6 +22,21 @@ function Header({ children }) {
     } else {
       setMenuState(styles.hideMenu);
     }
+  }
+
+  useEffect(() => {
+    //useEffect only run on client side
+    setMounted(true);
+
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  //mobil/ipad meny lukker seg når man trykker på list item, hvis
+  //skjermstørrelse er 1000px eller over skjer ingenting, siden det ikke er burgermeny
+  const mobileMenu = screenWidth >= 1000 ? menuFunction : "";
+
+  if (!mounted) {
+    return null;
   }
 
   // console.log(theme);
@@ -75,17 +81,17 @@ when the darkmode/ligtmode button is clicked */
           >
             <ul className="font-serif">
               <li className="">
-                <Link href="#prosjekter">
+                <Link href="#prosjekter" onClick={mobileMenu}>
                   Prosjekter<span className="text-accent">.</span>
                 </Link>
               </li>
               <li>
-                <Link href="#om">
+                <Link href="#om" onClick={mobileMenu}>
                   Om meg<span className="text-accent">.</span>
                 </Link>
               </li>
               <li>
-                <Link href="#kontakt">
+                <Link href="#kontakt" onClick={mobileMenu}>
                   Kontakt<span className="text-accent">.</span>
                 </Link>
               </li>

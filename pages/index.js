@@ -191,6 +191,7 @@ when the darkmode/ligtmode button is clicked */
             </div>
           </section>
           <section
+            id="prosjekter"
             className={`${styles.carousel} bg-primary_white dark:bg-primary_gray`}
           >
             <Heading
