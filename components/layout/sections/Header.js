@@ -16,24 +16,24 @@ function Header({ children }) {
   const [screenWidth, setScreenWidth] = useState();
   const [menuState, setMenuState] = useState(styles.hideMenu);
 
-  function menuFunction() {
-    if (menuState === styles.hideMenu) {
-      setMenuState(styles.showMenu);
-    } else {
-      setMenuState(styles.hideMenu);
-    }
-  }
-
+  console.log(screenWidth);
   useEffect(() => {
     //useEffect only run on client side
     setMounted(true);
 
     setScreenWidth(window.innerWidth);
   }, []);
+  const menuFunction = () => {
+    if (menuState === styles.hideMenu) {
+      setMenuState(styles.showMenu);
+    } else {
+      setMenuState(styles.hideMenu);
+    }
+  };
 
   //mobil/ipad meny lukker seg når man trykker på list item, hvis
   //skjermstørrelse er 1000px eller over skjer ingenting, siden det ikke er burgermeny
-  const mobileMenu = screenWidth >= 1000 ? menuFunction : "";
+  // let mobileMenu = screenWidth >= 1000 ? menuFunction : "";
 
   if (!mounted) {
     return null;
@@ -81,17 +81,26 @@ when the darkmode/ligtmode button is clicked */
           >
             <ul className="font-serif">
               <li className="">
-                <Link href="#prosjekter" onClick={mobileMenu}>
+                <Link
+                  href="#prosjekter"
+                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                >
                   Prosjekter<span className="text-accent">.</span>
                 </Link>
               </li>
               <li>
-                <Link href="#om" onClick={mobileMenu}>
+                <Link
+                  href="#om"
+                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                >
                   Om meg<span className="text-accent">.</span>
                 </Link>
               </li>
               <li>
-                <Link href="#kontakt" onClick={mobileMenu}>
+                <Link
+                  href="#kontakt"
+                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                >
                   Kontakt<span className="text-accent">.</span>
                 </Link>
               </li>
