@@ -133,7 +133,12 @@ when the darkmode/ligtmode button is clicked */
           >
             <div>
               <div className={`${styles.portrait} ${slideStyle}`}>
-                <Image src={portrait} className={styles.portrait} alt="text" />
+                <Image
+                  src={portrait}
+                  className={styles.portrait}
+                  loading="eager"
+                  alt="text"
+                />
               </div>
             </div>
           </div>

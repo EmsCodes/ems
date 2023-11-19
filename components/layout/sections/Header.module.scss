@@ -12,8 +12,15 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-    top: 50%;
+    // margin-top: 50vh;
+    // transform: translateY(-50%);
+    height: 100%;
     ul {
+      display: flex;
+      flex-flow: column;
+      gap: 50px;
+      justify-content: center;
+      font-size: calc(25px + (35 - 25) * ((100vw - 320px) / (2000 - 320)));
     }
     li {
       // padding: 5px;
@@ -79,6 +86,7 @@
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
+  animation: scaleDown 1s;
 }
 .showMenu {
   //   display: block;
@@ -89,7 +97,7 @@
   inset: 0;
 
   animation: scaleUp 0.5s;
-  background: #202020eb;
+  background: #202020f1;
   .burgerBtnOpen {
     display: flex;
 
@@ -140,16 +148,15 @@
 @keyframes scaleDown {
   0% {
     transform: scale(1);
-    left: 0;
-    right: 50%;
+    inset: 0;
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 0.623);
+    background: #202020eb;
   }
   100% {
     transform: scale(0);
     border-radius: 0;
-
-    background-color: none;
+    inset: 100%;
+    background: #20202000;
   }
 }
 
