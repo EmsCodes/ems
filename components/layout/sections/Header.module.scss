@@ -86,7 +86,6 @@
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
-  animation: scaleDown 1s;
 }
 .showMenu {
   //   display: block;
@@ -145,20 +144,20 @@
     border-radius: 0%;
   }
 }
-@keyframes scaleDown {
-  0% {
-    transform: scale(1);
-    inset: 0;
-    border-radius: 100%;
-    background: #202020eb;
-  }
-  100% {
-    transform: scale(0);
-    border-radius: 0;
-    inset: 100%;
-    background: #20202000;
-  }
-}
+// @keyframes scaleDown {
+//   0% {
+//     transform: scale(1);
+//     inset: 0;
+//     border-radius: 100%;
+//     // background: #202020eb;
+//   }
+//   100% {
+//     transform: scale(0);
+//     border-radius: 0;
+//     inset: 100%;
+//     background: #20202000;
+//   }
+// }
 
 @media only screen and (min-width: 1000px) {
   .header {
@@ -177,6 +176,9 @@
     .hideMenu {
       position: static !important;
     }
+    // .showMenu {
+    //   position: static !important;
+    // }
     button {
       display: none;
     }

@@ -17,6 +17,10 @@ function Header({ children }) {
   const [menuState, setMenuState] = useState(styles.hideMenu);
 
   console.log(screenWidth);
+
+  // const test = () =>{}
+
+  console.log(screenWidth);
   useEffect(() => {
     //useEffect only run on client side
     setMounted(true);
@@ -83,7 +87,7 @@ when the darkmode/ligtmode button is clicked */
               <li className="">
                 <Link
                   href="#prosjekter"
-                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                  onClick={screenWidth <= "999" ? menuFunction : ""}
                 >
                   Prosjekter<span className="text-accent">.</span>
                 </Link>
@@ -91,7 +95,7 @@ when the darkmode/ligtmode button is clicked */
               <li>
                 <Link
                   href="#om"
-                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                  onClick={screenWidth <= "999" ? menuFunction : ""}
                 >
                   Om meg<span className="text-accent">.</span>
                 </Link>
@@ -99,7 +103,7 @@ when the darkmode/ligtmode button is clicked */
               <li>
                 <Link
                   href="#kontakt"
-                  onClick={screenWidth <= "1000" ? menuFunction : ""}
+                  onClick={screenWidth <= "999" ? menuFunction : ""}
                 >
                   Kontakt<span className="text-accent">.</span>
                 </Link>
